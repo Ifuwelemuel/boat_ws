@@ -1,0 +1,1 @@
+Invoking command in '/home/raspberry/boat_ws/build/my_boat_bringup': /usr/bin/cmake --build /home/raspberry/boat_ws/build/my_boat_bringup -- -j4 -l4

@@ -1,0 +1,20 @@
+[0.074s] Invoking command in '/home/raspberry/boat_ws/build/my_boat_bringup': /usr/bin/cmake --build /home/raspberry/boat_ws/build/my_boat_bringup -- -j4 -l4
+[2.080s] Invoked command in '/home/raspberry/boat_ws/build/my_boat_bringup' returned '0': /usr/bin/cmake --build /home/raspberry/boat_ws/build/my_boat_bringup -- -j4 -l4
+[2.118s] Invoking command in '/home/raspberry/boat_ws/build/my_boat_bringup': /usr/bin/cmake --install /home/raspberry/boat_ws/build/my_boat_bringup
+[2.148s] -- Install configuration: ""
+[2.151s] -- Up-to-date: /home/raspberry/boat_ws/install/my_boat_bringup/share/ament_index/resource_index/package_run_dependencies/my_boat_bringup
+[2.151s] -- Up-to-date: /home/raspberry/boat_ws/install/my_boat_bringup/share/ament_index/resource_index/parent_prefix_path/my_boat_bringup
+[2.152s] -- Up-to-date: /home/raspberry/boat_ws/install/my_boat_bringup/share/my_boat_bringup/environment/ament_prefix_path.sh
+[2.152s] -- Up-to-date: /home/raspberry/boat_ws/install/my_boat_bringup/share/my_boat_bringup/environment/ament_prefix_path.dsv
+[2.153s] -- Up-to-date: /home/raspberry/boat_ws/install/my_boat_bringup/share/my_boat_bringup/environment/path.sh
+[2.153s] -- Up-to-date: /home/raspberry/boat_ws/install/my_boat_bringup/share/my_boat_bringup/environment/path.dsv
+[2.153s] -- Up-to-date: /home/raspberry/boat_ws/install/my_boat_bringup/share/my_boat_bringup/local_setup.bash
+[2.156s] -- Up-to-date: /home/raspberry/boat_ws/install/my_boat_bringup/share/my_boat_bringup/local_setup.sh
+[2.161s] -- Up-to-date: /home/raspberry/boat_ws/install/my_boat_bringup/share/my_boat_bringup/local_setup.zsh
+[2.162s] -- Up-to-date: /home/raspberry/boat_ws/install/my_boat_bringup/share/my_boat_bringup/local_setup.dsv
+[2.163s] -- Installing: /home/raspberry/boat_ws/install/my_boat_bringup/share/my_boat_bringup/package.dsv
+[2.167s] -- Up-to-date: /home/raspberry/boat_ws/install/my_boat_bringup/share/ament_index/resource_index/packages/my_boat_bringup
+[2.168s] -- Up-to-date: /home/raspberry/boat_ws/install/my_boat_bringup/share/my_boat_bringup/cmake/my_boat_bringupConfig.cmake
+[2.169s] -- Up-to-date: /home/raspberry/boat_ws/install/my_boat_bringup/share/my_boat_bringup/cmake/my_boat_bringupConfig-version.cmake
+[2.170s] -- Up-to-date: /home/raspberry/boat_ws/install/my_boat_bringup/share/my_boat_bringup/package.xml
+[2.181s] Invoked command in '/home/raspberry/boat_ws/build/my_boat_bringup' returned '0': /usr/bin/cmake --install /home/raspberry/boat_ws/build/my_boat_bringup

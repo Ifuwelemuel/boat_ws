@@ -1,0 +1,21 @@
+[4.706s] Invoking command in '/home/raspberry/boat_ws/src/my_boat_teleop': PYTHONPATH=/home/raspberry/boat_ws/build/my_boat_teleop/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/raspberry/boat_ws/install/my_boat_teleop/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/my_boat_teleop build --build-base /home/raspberry/boat_ws/build/my_boat_teleop/build install --record /home/raspberry/boat_ws/build/my_boat_teleop/install.log --single-version-externally-managed install_data
+[6.111s] running egg_info
+[6.115s] writing ../../build/my_boat_teleop/my_boat_teleop.egg-info/PKG-INFO
+[6.116s] writing dependency_links to ../../build/my_boat_teleop/my_boat_teleop.egg-info/dependency_links.txt
+[6.117s] writing entry points to ../../build/my_boat_teleop/my_boat_teleop.egg-info/entry_points.txt
+[6.118s] writing requirements to ../../build/my_boat_teleop/my_boat_teleop.egg-info/requires.txt
+[6.119s] writing top-level names to ../../build/my_boat_teleop/my_boat_teleop.egg-info/top_level.txt
+[6.128s] reading manifest file '../../build/my_boat_teleop/my_boat_teleop.egg-info/SOURCES.txt'
+[6.129s] adding license file 'LICENSE'
+[6.133s] writing manifest file '../../build/my_boat_teleop/my_boat_teleop.egg-info/SOURCES.txt'
+[6.133s] running build
+[6.134s] running build_py
+[6.135s] running install
+[6.136s] running install_lib
+[6.142s] running install_data
+[6.143s] running install_egg_info
+[6.154s] removing '/home/raspberry/boat_ws/install/my_boat_teleop/lib/python3.10/site-packages/my_boat_teleop-0.0.0-py3.10.egg-info' (and everything under it)
+[6.157s] Copying ../../build/my_boat_teleop/my_boat_teleop.egg-info to /home/raspberry/boat_ws/install/my_boat_teleop/lib/python3.10/site-packages/my_boat_teleop-0.0.0-py3.10.egg-info
+[6.162s] running install_scripts
+[6.273s] writing list of installed files to '/home/raspberry/boat_ws/build/my_boat_teleop/install.log'
+[6.432s] Invoked command in '/home/raspberry/boat_ws/src/my_boat_teleop' returned '0': PYTHONPATH=/home/raspberry/boat_ws/build/my_boat_teleop/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/raspberry/boat_ws/install/my_boat_teleop/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/my_boat_teleop build --build-base /home/raspberry/boat_ws/build/my_boat_teleop/build install --record /home/raspberry/boat_ws/build/my_boat_teleop/install.log --single-version-externally-managed install_data

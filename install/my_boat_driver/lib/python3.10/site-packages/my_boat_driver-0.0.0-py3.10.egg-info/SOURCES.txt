@@ -9,7 +9,10 @@ setup.py
 ../../build/my_boat_driver/my_boat_driver.egg-info/requires.txt
 ../../build/my_boat_driver/my_boat_driver.egg-info/top_level.txt
 ../../build/my_boat_driver/my_boat_driver.egg-info/zip-safe
+launch/driver.launch.py
 my_boat_driver/__init__.py
+my_boat_driver/motor_driver_node.py
+my_boat_driver/test.py
 resource/my_boat_driver
 test/test_copyright.py
 test/test_flake8.py

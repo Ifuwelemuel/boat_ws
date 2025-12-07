@@ -1,0 +1,26 @@
+[3.832s] Invoking command in '/home/raspberry/boat_ws/src/my_boat_driver': PYTHONPATH=/home/raspberry/boat_ws/build/my_boat_driver/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/raspberry/boat_ws/install/my_boat_driver/lib/python3.10/site-packages: /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/my_boat_driver build --build-base /home/raspberry/boat_ws/build/my_boat_driver/build install --record /home/raspberry/boat_ws/build/my_boat_driver/install.log --single-version-externally-managed install_data
+[5.014s] running egg_info
+[5.017s] writing ../../build/my_boat_driver/my_boat_driver.egg-info/PKG-INFO
+[5.019s] writing dependency_links to ../../build/my_boat_driver/my_boat_driver.egg-info/dependency_links.txt
+[5.020s] writing entry points to ../../build/my_boat_driver/my_boat_driver.egg-info/entry_points.txt
+[5.021s] writing requirements to ../../build/my_boat_driver/my_boat_driver.egg-info/requires.txt
+[5.024s] writing top-level names to ../../build/my_boat_driver/my_boat_driver.egg-info/top_level.txt
+[5.030s] reading manifest file '../../build/my_boat_driver/my_boat_driver.egg-info/SOURCES.txt'
+[5.032s] adding license file 'LICENSE'
+[5.035s] writing manifest file '../../build/my_boat_driver/my_boat_driver.egg-info/SOURCES.txt'
+[5.036s] running build
+[5.037s] running build_py
+[5.037s] copying my_boat_driver/motor_driver_node.py -> /home/raspberry/boat_ws/build/my_boat_driver/build/lib/my_boat_driver
+[5.039s] running install
+[5.040s] running install_lib
+[5.044s] copying /home/raspberry/boat_ws/build/my_boat_driver/build/lib/my_boat_driver/motor_driver_node.py -> /home/raspberry/boat_ws/install/my_boat_driver/lib/python3.10/site-packages/my_boat_driver
+[5.049s] byte-compiling /home/raspberry/boat_ws/install/my_boat_driver/lib/python3.10/site-packages/my_boat_driver/motor_driver_node.py to motor_driver_node.cpython-310.pyc
+[5.055s] running install_data
+[5.056s] running install_egg_info
+[5.064s] removing '/home/raspberry/boat_ws/install/my_boat_driver/lib/python3.10/site-packages/my_boat_driver-0.0.0-py3.10.egg-info' (and everything under it)
+[5.067s] Copying ../../build/my_boat_driver/my_boat_driver.egg-info to /home/raspberry/boat_ws/install/my_boat_driver/lib/python3.10/site-packages/my_boat_driver-0.0.0-py3.10.egg-info
+[5.077s] running install_scripts
+[5.183s] Installing motor_driver_node script to /home/raspberry/boat_ws/install/my_boat_driver/lib/my_boat_driver
+[5.185s] Installing motor_driver_test script to /home/raspberry/boat_ws/install/my_boat_driver/lib/my_boat_driver
+[5.193s] writing list of installed files to '/home/raspberry/boat_ws/build/my_boat_driver/install.log'
+[5.408s] Invoked command in '/home/raspberry/boat_ws/src/my_boat_driver' returned '0': PYTHONPATH=/home/raspberry/boat_ws/build/my_boat_driver/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/raspberry/boat_ws/install/my_boat_driver/lib/python3.10/site-packages: /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/my_boat_driver build --build-base /home/raspberry/boat_ws/build/my_boat_driver/build install --record /home/raspberry/boat_ws/build/my_boat_driver/install.log --single-version-externally-managed install_data

@@ -24,6 +24,7 @@ setup(
     },
     entry_points={
         'console_scripts': [
+            'teleop_keyboard_node = my_boat_teleop.teleop_keyboard_node:main',
         ],
     },
 )

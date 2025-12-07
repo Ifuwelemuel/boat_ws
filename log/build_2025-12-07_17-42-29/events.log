@@ -1,0 +1,187 @@
+[0.000000] (-) TimerEvent: {}
+[0.002378] (my_boat_bringup) JobQueued: {'identifier': 'my_boat_bringup', 'dependencies': OrderedDict()}
+[0.002863] (my_boat_driver) JobQueued: {'identifier': 'my_boat_driver', 'dependencies': OrderedDict()}
+[0.003050] (my_boat_teleop) JobQueued: {'identifier': 'my_boat_teleop', 'dependencies': OrderedDict()}
+[0.003363] (my_boat_bringup) JobStarted: {'identifier': 'my_boat_bringup'}
+[0.098155] (-) TimerEvent: {}
+[0.199300] (-) TimerEvent: {}
+[0.300472] (-) TimerEvent: {}
+[0.401298] (-) TimerEvent: {}
+[0.502668] (-) TimerEvent: {}
+[0.513803] (my_boat_driver) JobStarted: {'identifier': 'my_boat_driver'}
+[0.599500] (my_boat_teleop) JobStarted: {'identifier': 'my_boat_teleop'}
+[0.602940] (-) TimerEvent: {}
+[0.668948] (my_boat_bringup) JobProgress: {'identifier': 'my_boat_bringup', 'progress': 'cmake'}
+[0.691822] (my_boat_bringup) JobProgress: {'identifier': 'my_boat_bringup', 'progress': 'build'}
+[0.695393] (my_boat_bringup) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/raspberry/boat_ws/build/my_boat_bringup', '--', '-j4', '-l4'], 'cwd': '/home/raspberry/boat_ws/build/my_boat_bringup', 'env': OrderedDict([('PYTHON_BASIC_REPL', '1'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'raspberry'), ('SSH_CLIENT', '192.168.3.66 61751 22'), ('XDG_SESSION_TYPE', 'tty'), ('GIT_ASKPASS', '/home/raspberry/.vscode-server/cli/servers/Stable-bf9252a2fb45be6893dd8870c0bf37e2e1766d61/server/extensions/git/dist/askpass.sh'), ('SHLVL', '2'), ('BROWSER', '/home/raspberry/.vscode-server/cli/servers/Stable-bf9252a2fb45be6893dd8870c0bf37e2e1766d61/server/bin/helpers/browser.sh'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/raspberry'), ('TERM_PROGRAM_VERSION', '1.106.3'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-1a68e2fe-a716-4e08-9a41-484c231fe4a7.sock'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/raspberry/.vscode-server/cli/servers/Stable-bf9252a2fb45be6893dd8870c0bf37e2e1766d61/server/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/home/raspberry/.vscode-server/cli/servers/Stable-bf9252a2fb45be6893dd8870c0bf37e2e1766d61/server/node'), ('SSL_CERT_FILE', '/usr/lib/ssl/certs/ca-certificates.crt'), ('PYDEVD_DISABLE_FILE_VALIDATION', '1'), ('BUNDLED_DEBUGPY_PATH', '/home/raspberry/.vscode-server/extensions/ms-python.debugpy-2025.16.0/bundled/libs/debugpy'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('LOGNAME', 'raspberry'), ('_', '/usr/bin/colcon'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '2'), ('PATH', '/home/raspberry/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/home/raspberry/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli:/home/raspberry/.vscode-server/cli/servers/Stable-bf9252a2fb45be6893dd8870c0bf37e2e1766d61/server/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/raspberry/.vscode-server/extensions/ms-python.debugpy-2025.16.0/bundled/scripts/noConfigScripts'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('SSL_CERT_DIR', '/usr/lib/ssl/certs'), ('VSCODE_DEBUGPY_ADAPTER_ENDPOINTS', '/home/raspberry/.vscode-server/extensions/ms-python.debugpy-2025.16.0/.noConfigDebugAdapterEndpoints/endpoint-ae46bc19800facd3.txt'), ('LANG', 'C.UTF-8'), ('PYTHONSTARTUP', '/home/raspberry/.vscode-server/data/User/workspaceStorage/bbf0df6ea70f583a93e00d0e6731b724/ms-python.python/pythonrc.py'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-7a4d83fdbd.sock'), ('TERM_PROGRAM', 'vscode'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/raspberry/boat_ws/build/my_boat_bringup'), ('SSH_CONNECTION', '192.168.3.66 61751 192.168.3.99 22'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('COLCON', '1')]), 'shell': False}
+[0.703114] (-) TimerEvent: {}
+[0.803938] (-) TimerEvent: {}
+[0.904974] (-) TimerEvent: {}
+[1.006256] (-) TimerEvent: {}
+[1.107549] (-) TimerEvent: {}
+[1.271121] (-) TimerEvent: {}
+[1.378577] (-) TimerEvent: {}
+[1.479314] (-) TimerEvent: {}
+[1.580214] (-) TimerEvent: {}
+[1.680961] (-) TimerEvent: {}
+[1.781803] (-) TimerEvent: {}
+[1.882640] (-) TimerEvent: {}
+[1.983357] (-) TimerEvent: {}
+[2.084166] (-) TimerEvent: {}
+[2.184879] (-) TimerEvent: {}
+[2.285655] (-) TimerEvent: {}
+[2.386548] (-) TimerEvent: {}
+[2.487708] (-) TimerEvent: {}
+[2.588930] (-) TimerEvent: {}
+[2.690136] (-) TimerEvent: {}
+[2.791415] (-) TimerEvent: {}
+[2.892339] (-) TimerEvent: {}
+[2.993460] (-) TimerEvent: {}
+[3.094225] (-) TimerEvent: {}
+[3.195076] (-) TimerEvent: {}
+[3.297697] (-) TimerEvent: {}
+[3.398786] (-) TimerEvent: {}
+[3.499593] (-) TimerEvent: {}
+[3.600413] (-) TimerEvent: {}
+[3.701348] (-) TimerEvent: {}
+[3.802665] (-) TimerEvent: {}
+[3.903367] (-) TimerEvent: {}
+[4.004066] (-) TimerEvent: {}
+[4.105201] (-) TimerEvent: {}
+[4.207157] (-) TimerEvent: {}
+[4.309793] (-) TimerEvent: {}
+[4.411386] (-) TimerEvent: {}
+[4.513088] (-) TimerEvent: {}
+[4.614082] (-) TimerEvent: {}
+[4.715135] (-) TimerEvent: {}
+[4.876402] (-) TimerEvent: {}
+[4.977234] (-) TimerEvent: {}
+[5.078054] (-) TimerEvent: {}
+[5.179932] (-) TimerEvent: {}
+[5.281469] (-) TimerEvent: {}
+[5.382810] (-) TimerEvent: {}
+[5.483740] (-) TimerEvent: {}
+[5.585273] (-) TimerEvent: {}
+[5.686735] (-) TimerEvent: {}
+[5.788104] (-) TimerEvent: {}
+[5.888952] (-) TimerEvent: {}
+[5.989733] (-) TimerEvent: {}
+[6.091017] (-) TimerEvent: {}
+[6.191896] (-) TimerEvent: {}
+[6.292912] (-) TimerEvent: {}
+[6.327261] (my_boat_bringup) CommandEnded: {'returncode': 0}
+[6.393165] (-) TimerEvent: {}
+[6.432292] (my_boat_bringup) JobProgress: {'identifier': 'my_boat_bringup', 'progress': 'install'}
+[6.467114] (my_boat_bringup) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/raspberry/boat_ws/build/my_boat_bringup'], 'cwd': '/home/raspberry/boat_ws/build/my_boat_bringup', 'env': OrderedDict([('PYTHON_BASIC_REPL', '1'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'raspberry'), ('SSH_CLIENT', '192.168.3.66 61751 22'), ('XDG_SESSION_TYPE', 'tty'), ('GIT_ASKPASS', '/home/raspberry/.vscode-server/cli/servers/Stable-bf9252a2fb45be6893dd8870c0bf37e2e1766d61/server/extensions/git/dist/askpass.sh'), ('SHLVL', '2'), ('BROWSER', '/home/raspberry/.vscode-server/cli/servers/Stable-bf9252a2fb45be6893dd8870c0bf37e2e1766d61/server/bin/helpers/browser.sh'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/raspberry'), ('TERM_PROGRAM_VERSION', '1.106.3'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-1a68e2fe-a716-4e08-9a41-484c231fe4a7.sock'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/raspberry/.vscode-server/cli/servers/Stable-bf9252a2fb45be6893dd8870c0bf37e2e1766d61/server/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/home/raspberry/.vscode-server/cli/servers/Stable-bf9252a2fb45be6893dd8870c0bf37e2e1766d61/server/node'), ('SSL_CERT_FILE', '/usr/lib/ssl/certs/ca-certificates.crt'), ('PYDEVD_DISABLE_FILE_VALIDATION', '1'), ('BUNDLED_DEBUGPY_PATH', '/home/raspberry/.vscode-server/extensions/ms-python.debugpy-2025.16.0/bundled/libs/debugpy'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('LOGNAME', 'raspberry'), ('_', '/usr/bin/colcon'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '2'), ('PATH', '/home/raspberry/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/home/raspberry/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli:/home/raspberry/.vscode-server/cli/servers/Stable-bf9252a2fb45be6893dd8870c0bf37e2e1766d61/server/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/raspberry/.vscode-server/extensions/ms-python.debugpy-2025.16.0/bundled/scripts/noConfigScripts'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('SSL_CERT_DIR', '/usr/lib/ssl/certs'), ('VSCODE_DEBUGPY_ADAPTER_ENDPOINTS', '/home/raspberry/.vscode-server/extensions/ms-python.debugpy-2025.16.0/.noConfigDebugAdapterEndpoints/endpoint-ae46bc19800facd3.txt'), ('LANG', 'C.UTF-8'), ('PYTHONSTARTUP', '/home/raspberry/.vscode-server/data/User/workspaceStorage/bbf0df6ea70f583a93e00d0e6731b724/ms-python.python/pythonrc.py'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-7a4d83fdbd.sock'), ('TERM_PROGRAM', 'vscode'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/raspberry/boat_ws/build/my_boat_bringup'), ('SSH_CONNECTION', '192.168.3.66 61751 192.168.3.99 22'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('COLCON', '1')]), 'shell': False}
+[6.493372] (-) TimerEvent: {}
+[6.594793] (-) TimerEvent: {}
+[6.696000] (-) TimerEvent: {}
+[6.778294] (my_boat_bringup) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[6.780470] (my_boat_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/raspberry/boat_ws/install/my_boat_bringup/share/ament_index/resource_index/package_run_dependencies/my_boat_bringup\n'}
+[6.781842] (my_boat_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/raspberry/boat_ws/install/my_boat_bringup/share/ament_index/resource_index/parent_prefix_path/my_boat_bringup\n'}
+[6.782523] (my_boat_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/raspberry/boat_ws/install/my_boat_bringup/share/my_boat_bringup/environment/ament_prefix_path.sh\n'}
+[6.783343] (my_boat_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/raspberry/boat_ws/install/my_boat_bringup/share/my_boat_bringup/environment/ament_prefix_path.dsv\n'}
+[6.784029] (my_boat_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/raspberry/boat_ws/install/my_boat_bringup/share/my_boat_bringup/environment/path.sh\n'}
+[6.784638] (my_boat_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/raspberry/boat_ws/install/my_boat_bringup/share/my_boat_bringup/environment/path.dsv\n'}
+[6.785565] (my_boat_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/raspberry/boat_ws/install/my_boat_bringup/share/my_boat_bringup/local_setup.bash\n'}
+[6.786515] (my_boat_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/raspberry/boat_ws/install/my_boat_bringup/share/my_boat_bringup/local_setup.sh\n'}
+[6.786971] (my_boat_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/raspberry/boat_ws/install/my_boat_bringup/share/my_boat_bringup/local_setup.zsh\n'}
+[6.787411] (my_boat_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/raspberry/boat_ws/install/my_boat_bringup/share/my_boat_bringup/local_setup.dsv\n'}
+[6.787855] (my_boat_bringup) StdoutLine: {'line': b'-- Installing: /home/raspberry/boat_ws/install/my_boat_bringup/share/my_boat_bringup/package.dsv\n'}
+[6.796078] (-) TimerEvent: {}
+[6.896726] (-) TimerEvent: {}
+[6.906141] (my_boat_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/raspberry/boat_ws/install/my_boat_bringup/share/ament_index/resource_index/packages/my_boat_bringup\n'}
+[6.907676] (my_boat_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/raspberry/boat_ws/install/my_boat_bringup/share/my_boat_bringup/cmake/my_boat_bringupConfig.cmake\n'}
+[6.908971] (my_boat_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/raspberry/boat_ws/install/my_boat_bringup/share/my_boat_bringup/cmake/my_boat_bringupConfig-version.cmake\n'}
+[6.910342] (my_boat_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/raspberry/boat_ws/install/my_boat_bringup/share/my_boat_bringup/package.xml\n'}
+[6.938470] (my_boat_bringup) CommandEnded: {'returncode': 0}
+[6.996906] (-) TimerEvent: {}
+[7.097957] (-) TimerEvent: {}
+[7.198773] (-) TimerEvent: {}
+[7.299650] (-) TimerEvent: {}
+[7.400565] (-) TimerEvent: {}
+[7.501835] (-) TimerEvent: {}
+[7.602635] (-) TimerEvent: {}
+[7.703458] (-) TimerEvent: {}
+[7.804615] (-) TimerEvent: {}
+[7.905793] (-) TimerEvent: {}
+[8.006684] (-) TimerEvent: {}
+[8.052340] (my_boat_bringup) JobEnded: {'identifier': 'my_boat_bringup', 'rc': 0}
+[8.106901] (-) TimerEvent: {}
+[8.208946] (-) TimerEvent: {}
+[8.310726] (-) TimerEvent: {}
+[8.411642] (-) TimerEvent: {}
+[8.512448] (-) TimerEvent: {}
+[8.613367] (-) TimerEvent: {}
+[8.714291] (-) TimerEvent: {}
+[8.815857] (-) TimerEvent: {}
+[8.918518] (-) TimerEvent: {}
+[9.021980] (-) TimerEvent: {}
+[9.123723] (-) TimerEvent: {}
+[9.225780] (-) TimerEvent: {}
+[9.283393] (my_boat_teleop) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/my_boat_teleop', 'build', '--build-base', '/home/raspberry/boat_ws/build/my_boat_teleop/build', 'install', '--record', '/home/raspberry/boat_ws/build/my_boat_teleop/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/raspberry/boat_ws/src/my_boat_teleop', 'env': {'PYTHON_BASIC_REPL': '1', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'raspberry', 'SSH_CLIENT': '192.168.3.66 61751 22', 'XDG_SESSION_TYPE': 'tty', 'GIT_ASKPASS': '/home/raspberry/.vscode-server/cli/servers/Stable-bf9252a2fb45be6893dd8870c0bf37e2e1766d61/server/extensions/git/dist/askpass.sh', 'SHLVL': '2', 'BROWSER': '/home/raspberry/.vscode-server/cli/servers/Stable-bf9252a2fb45be6893dd8870c0bf37e2e1766d61/server/bin/helpers/browser.sh', 'MOTD_SHOWN': 'pam', 'HOME': '/home/raspberry', 'TERM_PROGRAM_VERSION': '1.106.3', 'VSCODE_IPC_HOOK_CLI': '/run/user/1000/vscode-ipc-1a68e2fe-a716-4e08-9a41-484c231fe4a7.sock', 'VSCODE_GIT_ASKPASS_MAIN': '/home/raspberry/.vscode-server/cli/servers/Stable-bf9252a2fb45be6893dd8870c0bf37e2e1766d61/server/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/home/raspberry/.vscode-server/cli/servers/Stable-bf9252a2fb45be6893dd8870c0bf37e2e1766d61/server/node', 'SSL_CERT_FILE': '/usr/lib/ssl/certs/ca-certificates.crt', 'PYDEVD_DISABLE_FILE_VALIDATION': '1', 'BUNDLED_DEBUGPY_PATH': '/home/raspberry/.vscode-server/extensions/ms-python.debugpy-2025.16.0/bundled/libs/debugpy', 'VSCODE_PYTHON_AUTOACTIVATE_GUARD': '1', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'LOGNAME': 'raspberry', '_': '/usr/bin/colcon', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '2', 'PATH': '/home/raspberry/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/home/raspberry/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli:/home/raspberry/.vscode-server/cli/servers/Stable-bf9252a2fb45be6893dd8870c0bf37e2e1766d61/server/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/raspberry/.vscode-server/extensions/ms-python.debugpy-2025.16.0/bundled/scripts/noConfigScripts', 'XDG_RUNTIME_DIR': '/run/user/1000', 'SSL_CERT_DIR': '/usr/lib/ssl/certs', 'VSCODE_DEBUGPY_ADAPTER_ENDPOINTS': '/home/raspberry/.vscode-server/extensions/ms-python.debugpy-2025.16.0/.noConfigDebugAdapterEndpoints/endpoint-ae46bc19800facd3.txt', 'LANG': 'C.UTF-8', 'PYTHONSTARTUP': '/home/raspberry/.vscode-server/data/User/workspaceStorage/bbf0df6ea70f583a93e00d0e6731b724/ms-python.python/pythonrc.py', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-7a4d83fdbd.sock', 'TERM_PROGRAM': 'vscode', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'PWD': '/home/raspberry/boat_ws/build/my_boat_teleop', 'SSH_CONNECTION': '192.168.3.66 61751 192.168.3.99 22', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'COLCON': '1', 'PYTHONPATH': '/home/raspberry/boat_ws/build/my_boat_teleop/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/raspberry/boat_ws/install/my_boat_teleop/lib/python3.10/site-packages:'}, 'shell': False}
+[9.323934] (my_boat_driver) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/my_boat_driver', 'build', '--build-base', '/home/raspberry/boat_ws/build/my_boat_driver/build', 'install', '--record', '/home/raspberry/boat_ws/build/my_boat_driver/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/raspberry/boat_ws/src/my_boat_driver', 'env': {'PYTHON_BASIC_REPL': '1', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'raspberry', 'SSH_CLIENT': '192.168.3.66 61751 22', 'XDG_SESSION_TYPE': 'tty', 'GIT_ASKPASS': '/home/raspberry/.vscode-server/cli/servers/Stable-bf9252a2fb45be6893dd8870c0bf37e2e1766d61/server/extensions/git/dist/askpass.sh', 'SHLVL': '2', 'BROWSER': '/home/raspberry/.vscode-server/cli/servers/Stable-bf9252a2fb45be6893dd8870c0bf37e2e1766d61/server/bin/helpers/browser.sh', 'MOTD_SHOWN': 'pam', 'HOME': '/home/raspberry', 'TERM_PROGRAM_VERSION': '1.106.3', 'VSCODE_IPC_HOOK_CLI': '/run/user/1000/vscode-ipc-1a68e2fe-a716-4e08-9a41-484c231fe4a7.sock', 'VSCODE_GIT_ASKPASS_MAIN': '/home/raspberry/.vscode-server/cli/servers/Stable-bf9252a2fb45be6893dd8870c0bf37e2e1766d61/server/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/home/raspberry/.vscode-server/cli/servers/Stable-bf9252a2fb45be6893dd8870c0bf37e2e1766d61/server/node', 'SSL_CERT_FILE': '/usr/lib/ssl/certs/ca-certificates.crt', 'PYDEVD_DISABLE_FILE_VALIDATION': '1', 'BUNDLED_DEBUGPY_PATH': '/home/raspberry/.vscode-server/extensions/ms-python.debugpy-2025.16.0/bundled/libs/debugpy', 'VSCODE_PYTHON_AUTOACTIVATE_GUARD': '1', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'LOGNAME': 'raspberry', '_': '/usr/bin/colcon', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '2', 'PATH': '/home/raspberry/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/home/raspberry/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli:/home/raspberry/.vscode-server/cli/servers/Stable-bf9252a2fb45be6893dd8870c0bf37e2e1766d61/server/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/raspberry/.vscode-server/extensions/ms-python.debugpy-2025.16.0/bundled/scripts/noConfigScripts', 'XDG_RUNTIME_DIR': '/run/user/1000', 'SSL_CERT_DIR': '/usr/lib/ssl/certs', 'VSCODE_DEBUGPY_ADAPTER_ENDPOINTS': '/home/raspberry/.vscode-server/extensions/ms-python.debugpy-2025.16.0/.noConfigDebugAdapterEndpoints/endpoint-ae46bc19800facd3.txt', 'LANG': 'C.UTF-8', 'PYTHONSTARTUP': '/home/raspberry/.vscode-server/data/User/workspaceStorage/bbf0df6ea70f583a93e00d0e6731b724/ms-python.python/pythonrc.py', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-7a4d83fdbd.sock', 'TERM_PROGRAM': 'vscode', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'PWD': '/home/raspberry/boat_ws/build/my_boat_driver', 'SSH_CONNECTION': '192.168.3.66 61751 192.168.3.99 22', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'COLCON': '1', 'PYTHONPATH': '/home/raspberry/boat_ws/build/my_boat_driver/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/raspberry/boat_ws/install/my_boat_driver/lib/python3.10/site-packages:'}, 'shell': False}
+[9.333425] (-) TimerEvent: {}
+[9.440585] (-) TimerEvent: {}
+[9.541457] (-) TimerEvent: {}
+[9.642296] (-) TimerEvent: {}
+[9.743175] (-) TimerEvent: {}
+[9.844353] (-) TimerEvent: {}
+[9.945250] (-) TimerEvent: {}
+[10.046092] (-) TimerEvent: {}
+[10.146947] (-) TimerEvent: {}
+[10.247796] (-) TimerEvent: {}
+[10.348532] (-) TimerEvent: {}
+[10.449349] (-) TimerEvent: {}
+[10.550167] (-) TimerEvent: {}
+[10.651453] (-) TimerEvent: {}
+[10.753198] (-) TimerEvent: {}
+[10.754695] (my_boat_teleop) StdoutLine: {'line': b'running egg_info\n'}
+[10.758550] (my_boat_teleop) StdoutLine: {'line': b'writing ../../build/my_boat_teleop/my_boat_teleop.egg-info/PKG-INFO\n'}
+[10.761443] (my_boat_teleop) StdoutLine: {'line': b'writing dependency_links to ../../build/my_boat_teleop/my_boat_teleop.egg-info/dependency_links.txt\n'}
+[10.762960] (my_boat_teleop) StdoutLine: {'line': b'writing entry points to ../../build/my_boat_teleop/my_boat_teleop.egg-info/entry_points.txt\n'}
+[10.764565] (my_boat_teleop) StdoutLine: {'line': b'writing requirements to ../../build/my_boat_teleop/my_boat_teleop.egg-info/requires.txt\n'}
+[10.765800] (my_boat_teleop) StdoutLine: {'line': b'writing top-level names to ../../build/my_boat_teleop/my_boat_teleop.egg-info/top_level.txt\n'}
+[10.766803] (my_boat_driver) StdoutLine: {'line': b'running egg_info\n'}
+[10.770354] (my_boat_driver) StdoutLine: {'line': b'writing ../../build/my_boat_driver/my_boat_driver.egg-info/PKG-INFO\n'}
+[10.771818] (my_boat_driver) StdoutLine: {'line': b'writing dependency_links to ../../build/my_boat_driver/my_boat_driver.egg-info/dependency_links.txt\n'}
+[10.773091] (my_boat_driver) StdoutLine: {'line': b'writing entry points to ../../build/my_boat_driver/my_boat_driver.egg-info/entry_points.txt\n'}
+[10.774412] (my_boat_driver) StdoutLine: {'line': b'writing requirements to ../../build/my_boat_driver/my_boat_driver.egg-info/requires.txt\n'}
+[10.775387] (my_boat_driver) StdoutLine: {'line': b'writing top-level names to ../../build/my_boat_driver/my_boat_driver.egg-info/top_level.txt\n'}
+[10.780468] (my_boat_teleop) StdoutLine: {'line': b"reading manifest file '../../build/my_boat_teleop/my_boat_teleop.egg-info/SOURCES.txt'\n"}
+[10.781165] (my_boat_teleop) StdoutLine: {'line': b"adding license file 'LICENSE'\n"}
+[10.782154] (my_boat_teleop) StdoutLine: {'line': b"writing manifest file '../../build/my_boat_teleop/my_boat_teleop.egg-info/SOURCES.txt'\n"}
+[10.785410] (my_boat_teleop) StdoutLine: {'line': b'running build\n'}
+[10.785999] (my_boat_teleop) StdoutLine: {'line': b'running build_py\n'}
+[10.786543] (my_boat_teleop) StdoutLine: {'line': b'running install\n'}
+[10.788245] (my_boat_driver) StdoutLine: {'line': b"reading manifest file '../../build/my_boat_driver/my_boat_driver.egg-info/SOURCES.txt'\n"}
+[10.788996] (my_boat_teleop) StdoutLine: {'line': b'running install_lib\n'}
+[10.789594] (my_boat_driver) StdoutLine: {'line': b"adding license file 'LICENSE'\n"}
+[10.790762] (my_boat_driver) StdoutLine: {'line': b"writing manifest file '../../build/my_boat_driver/my_boat_driver.egg-info/SOURCES.txt'\n"}
+[10.793916] (my_boat_driver) StdoutLine: {'line': b'running build\n'}
+[10.794630] (my_boat_driver) StdoutLine: {'line': b'running build_py\n'}
+[10.795750] (my_boat_driver) StdoutLine: {'line': b'running install\n'}
+[10.796513] (my_boat_teleop) StdoutLine: {'line': b'running install_data\n'}
+[10.797244] (my_boat_teleop) StdoutLine: {'line': b'running install_egg_info\n'}
+[10.797870] (my_boat_driver) StdoutLine: {'line': b'running install_lib\n'}
+[10.802924] (my_boat_driver) StdoutLine: {'line': b'running install_data\n'}
+[10.803767] (my_boat_teleop) StdoutLine: {'line': b"removing '/home/raspberry/boat_ws/install/my_boat_teleop/lib/python3.10/site-packages/my_boat_teleop-0.0.0-py3.10.egg-info' (and everything under it)\n"}
+[10.804597] (my_boat_driver) StdoutLine: {'line': b'running install_egg_info\n'}
+[10.807217] (my_boat_teleop) StdoutLine: {'line': b'Copying ../../build/my_boat_teleop/my_boat_teleop.egg-info to /home/raspberry/boat_ws/install/my_boat_teleop/lib/python3.10/site-packages/my_boat_teleop-0.0.0-py3.10.egg-info\n'}
+[10.818051] (my_boat_driver) StdoutLine: {'line': b"removing '/home/raspberry/boat_ws/install/my_boat_driver/lib/python3.10/site-packages/my_boat_driver-0.0.0-py3.10.egg-info' (and everything under it)\n"}
+[10.818749] (my_boat_driver) StdoutLine: {'line': b'Copying ../../build/my_boat_driver/my_boat_driver.egg-info to /home/raspberry/boat_ws/install/my_boat_driver/lib/python3.10/site-packages/my_boat_driver-0.0.0-py3.10.egg-info\n'}
+[10.819391] (my_boat_teleop) StdoutLine: {'line': b'running install_scripts\n'}
+[10.828402] (my_boat_driver) StdoutLine: {'line': b'running install_scripts\n'}
+[10.853426] (-) TimerEvent: {}
+[10.923805] (my_boat_teleop) StdoutLine: {'line': b"writing list of installed files to '/home/raspberry/boat_ws/build/my_boat_teleop/install.log'\n"}
+[10.953777] (-) TimerEvent: {}
+[10.955994] (my_boat_driver) StdoutLine: {'line': b'Installing motor_driver_node script to /home/raspberry/boat_ws/install/my_boat_driver/lib/my_boat_driver\n'}
+[10.958753] (my_boat_driver) StdoutLine: {'line': b"writing list of installed files to '/home/raspberry/boat_ws/build/my_boat_driver/install.log'\n"}
+[11.054233] (-) TimerEvent: {}
+[11.163585] (-) TimerEvent: {}
+[11.178234] (my_boat_driver) CommandEnded: {'returncode': 0}
+[11.242355] (my_boat_driver) JobEnded: {'identifier': 'my_boat_driver', 'rc': 0}
+[11.253214] (my_boat_teleop) CommandEnded: {'returncode': 0}
+[11.264734] (-) TimerEvent: {}
+[11.315364] (my_boat_teleop) JobEnded: {'identifier': 'my_boat_teleop', 'rc': 0}
+[11.321172] (-) EventReactorShutdown: {}

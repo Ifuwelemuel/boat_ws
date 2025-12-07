@@ -10,6 +10,7 @@ setup.py
 ../../build/my_boat_teleop/my_boat_teleop.egg-info/top_level.txt
 ../../build/my_boat_teleop/my_boat_teleop.egg-info/zip-safe
 my_boat_teleop/__init__.py
+my_boat_teleop/teleop_keyboard_node.py
 resource/my_boat_teleop
 test/test_copyright.py
 test/test_flake8.py
