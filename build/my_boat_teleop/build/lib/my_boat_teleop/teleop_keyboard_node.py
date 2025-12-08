@@ -2,6 +2,7 @@
 import sys
 import select
 import termios
+import time
 import tty
 
 import rclpy
@@ -33,17 +34,17 @@ def main():
     rclpy.init()
     node = Node('teleop_keyboard_node')
 
-    # Publish Twist to cmd_vel
     pub = node.create_publisher(Twist, '/cmd_vel', 10)
 
-    # Speed here is treated as a linear-speed scale (m/s-ish)
     speed_param = node.declare_parameter('speed', 1.0)
     speed = float(speed_param.value)
 
-    # Distance between left and right propulsion points (meters)
-    # Adjust to match your boat's geometry
     base_width_param = node.declare_parameter('base_width', 0.25)
     base_width = float(base_width_param.value)
+
+    loop_rate_param = node.declare_parameter('repeat_rate', 20.0)
+    repeat_rate = max(float(loop_rate_param.value), 1.0)
+    repeat_period = 1.0 / repeat_rate
 
     settings = termios.tcgetattr(sys.stdin)
 
@@ -55,42 +56,51 @@ def main():
     print("  X: Stop")
     print("  Ctrl-C to quit.")
 
+    last_msg = Twist()
+    last_key = None
+    next_publish_time = time.monotonic()
+
     try:
         while rclpy.ok():
-            key = get_key(settings)
+            rclpy.spin_once(node, timeout_sec=0.0)
+            key = get_key(settings).lower()
 
             if key in MOVE_BINDINGS:
                 left_cmd, right_cmd = MOVE_BINDINGS[key]
 
-                # Scale left/right commands
                 left_output = left_cmd * speed
                 right_output = right_cmd * speed
 
-                # Convert to diff-drive Twist
                 linear_x = (left_output + right_output) / 2.0
-
-                # Protect against divide-by-zero
                 if abs(base_width) < 1e-6:
                     angular_z = 0.0
                 else:
                     angular_z = (right_output - left_output) / base_width
 
-                msg = Twist()
-                msg.linear.x = float(linear_x)
-                msg.angular.z = float(angular_z)
+                last_msg = Twist()
+                last_msg.linear.x = float(linear_x)
+                last_msg.angular.z = float(angular_z)
 
-                pub.publish(msg)
+                pub.publish(last_msg)
+                last_key = key if key != 'x' else None
+                next_publish_time = time.monotonic() + repeat_period
 
                 node.get_logger().info(
                     f"Key: {key} | left={left_output:.2f}, right={right_output:.2f} "
                     f"=> linear.x={linear_x:.2f}, angular.z={angular_z:.2f}"
                 )
 
-            elif key == '\x03':  # Ctrl-C
+            elif key == '\x03':
                 break
+            else:
+                now = time.monotonic()
+                if last_key and now >= next_publish_time:
+                    pub.publish(last_msg)
+                    next_publish_time = now + repeat_period
+
+            time.sleep(0.01)
 
     finally:
-        # Publish stop
         stop_msg = Twist()
         stop_msg.linear.x = 0.0
         stop_msg.angular.z = 0.0
