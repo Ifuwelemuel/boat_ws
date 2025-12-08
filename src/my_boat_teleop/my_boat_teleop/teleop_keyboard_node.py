@@ -13,9 +13,9 @@ from geometry_msgs.msg import Twist
 # W = forward, S = backward, A = turn left, D = turn right, X = stop
 MOVE_BINDINGS = {
     'w': (1.0, 1.0),
-    's': (-1.0, -1.0),
-    'a': (-0.5, 0.5),
-    'd': (0.5, -0.5),
+    's': (0.0, 0.0),    # Disabled reverse (acts as stop)
+    'a': (0.0, 1.0),    # Pivot left: Left motor stops, Right motor pushes
+    'd': (1.0, 0.0),    # Pivot right: Left motor pushes, Right motor stops
     'x': (0.0, 0.0),
 }
 
