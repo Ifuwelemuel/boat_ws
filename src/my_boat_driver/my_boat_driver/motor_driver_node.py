@@ -34,7 +34,7 @@ class BoatBaseController(Node):
                 self.serial_port,
                 self.baudrate,
                 timeout=0.05,
-                write_timeout=0.1
+                write_timeout=1.0
             )
             self.get_logger().info(f"Opened serial port {self.serial_port} @ {self.baudrate}")
         except serial.serialutil.SerialException as e:
@@ -54,7 +54,7 @@ class BoatBaseController(Node):
         )
 
         # 20 Hz control loop
-        self.frequency_ = 0.05
+        self.frequency_ = 0.1
         self.timer = self.create_timer(self.frequency_, self.update)
 
     # Callbacks
@@ -133,8 +133,11 @@ class BoatBaseController(Node):
         self.get_logger().info(f"Serial TX -> {cmd.strip()}")
 
         try:
+            self.ser.reset_input_buffer()
             self.ser.write(cmd.encode('ascii'))
-            
+            response = self.ser.readline().decode('ascii').strip()
+            if response:
+                self.get_logger().info(f"Serial RX from arduino <- {response}")
         except serial.SerialTimeoutException:
             self.get_logger().warn("Serial write timed out! Arduino is too slow or disconnected.")
             # Optional: flush buffers to clear the blockage
