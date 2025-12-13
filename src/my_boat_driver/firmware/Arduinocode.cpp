@@ -10,6 +10,7 @@ const int ENCODER_PIN_A = 2;
 // --- CONSTANTS ---
 // UPDATED: Set to 100 as requested.
 const float MAX_MOTOR_RPM = 100.0; 
+const int   MAX_PWM       = 255;      // Arduino PWM limit
 const float ENCODER_TICKS_PER_REV = 2172.0;
 
 // --- PID CONSTANTS (Tunable) ---
@@ -50,7 +51,7 @@ void setup() {
 }
 
 void loop() {
-  // -------- 1. READ SERIAL COMMANDS --------
+  //  READ SERIAL COMMANDS
   if (Serial.available() > 0) {
     String input = Serial.readStringUntil('\n');
     input.trim();
@@ -58,10 +59,9 @@ void loop() {
     if (input.startsWith("CMD ")) {
       float newTarget = input.substring(4).toFloat();
       
-      // SAFETY CHECK: Clamp input between 0 and 100
+      //  Clamp input between 0 and 100
       if (newTarget < 0) {
         newTarget = 0;
-        Serial.println("Warning: Reverse disabled. Target set to 0.");
       } 
       else if (newTarget > MAX_MOTOR_RPM) {
         newTarget = MAX_MOTOR_RPM;
@@ -72,19 +72,19 @@ void loop() {
     }
   }
 
-  // -------- 2. PID LOOP (Runs every 100ms) --------
+  // PID LOOP (Runs every 100ms) 
   unsigned long nowMs = millis();
   unsigned long dtMs = nowMs - lastSpeedTimeMs;
 
   if (dtMs >= 100) { 
-    float dtSec = dtMs / 1000.0;
+    float dtSec = dtMs / 1000.0;// to get seconds 
 
-    // A. CALCULATE ACTUAL SPEED
+    //  CALCULATE ACTUAL SPEED
     long currentCount = encoderCount;
     long deltaTicks = currentCount - lastEncoderCount;
     float ticksPerSec = deltaTicks / dtSec;
     
-    // Reverse disabled, so speed is always positive
+  
     actualRPM = (ticksPerSec / ENCODER_TICKS_PER_REV) * 60.0;
 
     // B. PID CALCULATION
@@ -107,10 +107,10 @@ void loop() {
     // Output
     float output = P + I + D;
 
-    // C. APPLY TO MOTOR
+    
     runMotorDriver(output);
 
-    // D. DEBUG
+    //
     Serial.print("Tgt: "); Serial.print(commandedRPM);
     Serial.print(" | Act: "); Serial.print(actualRPM);
     Serial.print(" | PWM: "); Serial.println(output);
@@ -120,21 +120,25 @@ void loop() {
   }
 }
 
-// -------- MOTOR DRIVER HELPER --------
-void runMotorDriver(float pwmVal) {
+//MOTOR DRIVER  
+void runMotorDriver(float rpmVal_output) {
+
+  int pwmValue = (int)((rpmVal_output / MAX_MOTOR_RPM) * MAX_PWM);
+
+
   // Output Safety: If PID outputs negative (braking), just stop.
-  if (pwmVal < 0) {
-    pwmVal = 0; 
+  if (pwmValue < 0) {
+    pwmValue = 0; 
   }
   
   // Cap at 255
-  if (pwmVal > 255) pwmVal = 255;
+  if (pwmValue > MAX_PWM) pwmValue = MAX_PWM;
 
-  if (pwmVal > 0) {
+  if (pwmValue > 0) {
     // Forward Configuration
     digitalWrite(L298N_in1, HIGH);
     digitalWrite(L298N_in2, LOW);
-    analogWrite(L298N_enA, (int)pwmVal);
+    analogWrite(L298N_enA, (int)pwmValue);
   } else {
     // Stop / Coast
     digitalWrite(L298N_in1, LOW);
