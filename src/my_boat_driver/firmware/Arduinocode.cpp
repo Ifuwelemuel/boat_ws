@@ -1,39 +1,34 @@
-/*
- * Arduino Motor Control via Serial Command + Speed Feedback
- * Command Format (Serial Monitor): "CMD <rpm>"
- * Example: "CMD 60"   (forward)
- *          "CMD -30"  (reverse)
- *          "CMD 0"    (stop)
- */
 
 // --- PIN DEFINITIONS ---
-// Motor driver pins (L298N for one motor)
 const int L298N_enA = 9;   // PWM Pin
 const int L298N_in1 = 12;
 const int L298N_in2 = 13;
 
 // Encoder pin (Channel A)
-const int ENCODER_PIN_A = 2;   // Must be interrupt pin on UNO (2 or 3)
+const int ENCODER_PIN_A = 2;
 
 // --- CONSTANTS ---
-const float MAX_MOTOR_RPM = 60.0;     // Your motor's approx max RPM
-const int   MAX_PWM       = 255;      // Arduino PWM limit
-const float ENCODER_TICKS_PER_REV = 2172.0;  // Your measured value
+// UPDATED: Set to 100 as requested.
+const float MAX_MOTOR_RPM = 100.0; 
+const float ENCODER_TICKS_PER_REV = 2172.0;
 
-// --- SERIAL INPUT VARIABLES ---
-String inputString = "";
+// --- PID CONSTANTS (Tunable) ---
+float Kp = 2.0;   // Proportional Gain
+float Ki = 5.0;   // Integral Gain
+float Kd = 0.0;   // Derivative Gain
 
-// --- ENCODER / SPEED VARIABLES ---
-volatile long encoderCount = 0;  // updated in ISR
-
+// --- VARIABLES ---
+volatile long encoderCount = 0;
 unsigned long lastSpeedTimeMs = 0;
 long lastEncoderCount = 0;
+
 float actualRPM = 0.0;
-float commandedRPM = 0.0;       // last commanded RPM (for sign)
+float commandedRPM = 0.0;
+float integralSum = 0.0;
+float lastError = 0.0;
 
 // --- INTERRUPT SERVICE ROUTINE ---
 void encoderISR() {
-  // Count every edge on channel A
   encoderCount++;
 }
 
@@ -43,125 +38,107 @@ void setup() {
   pinMode(L298N_in1, OUTPUT);
   pinMode(L298N_in2, OUTPUT);
 
-  // Start with motor stopped
-  digitalWrite(L298N_in1, LOW);
-  digitalWrite(L298N_in2, LOW);
-  analogWrite(L298N_enA, 0);
-
   // Encoder pin
   pinMode(ENCODER_PIN_A, INPUT_PULLUP);
   attachInterrupt(digitalPinToInterrupt(ENCODER_PIN_A), encoderISR, CHANGE);
 
   // Serial
   Serial.begin(115200);
-  Serial.println("System Ready.");
-  Serial.println("Enter command format: CMD <rpm>");
+  Serial.println("System Ready: Max RPM 100, Forward Only.");
   
-
   lastSpeedTimeMs = millis();
-  lastEncoderCount = encoderCount;
 }
-
-
-
-
 
 void loop() {
   // -------- 1. READ SERIAL COMMANDS --------
   if (Serial.available() > 0) {
     String input = Serial.readStringUntil('\n');
-    input.trim();  // remove spaces/newlines at ends
+    input.trim();
 
     if (input.startsWith("CMD ")) {
-      String valueStr = input.substring(4); // part after "CMD "
-      float targetRPM = valueStr.toFloat();
-      setMotorSpeed(targetRPM);
-    } else {
-      Serial.println("Error: Unknown command. Use 'CMD <rpm>'");
+      float newTarget = input.substring(4).toFloat();
+      
+      // SAFETY CHECK: Clamp input between 0 and 100
+      if (newTarget < 0) {
+        newTarget = 0;
+        Serial.println("Warning: Reverse disabled. Target set to 0.");
+      } 
+      else if (newTarget > MAX_MOTOR_RPM) {
+        newTarget = MAX_MOTOR_RPM;
+        Serial.println("Warning: Request exceeds limit. Target set to 100.");
+      }
+      
+      commandedRPM = newTarget;
     }
   }
 
-  // -------- 2. COMPUTE ACTUAL SPEED PERIODICALLY --------
+  // -------- 2. PID LOOP (Runs every 100ms) --------
   unsigned long nowMs = millis();
   unsigned long dtMs = nowMs - lastSpeedTimeMs;
 
-  // e.g. update speed estimate every 100 ms
-  if (dtMs >= 100) {  // 0.1 seconds
+  if (dtMs >= 100) { 
+    float dtSec = dtMs / 1000.0;
 
-    long currentCount = encoderCount;  // copy volatile once
-    long deltaTicks   = currentCount - lastEncoderCount;
-    float dtSec       = dtMs / 1000.0;
-
-    // ticks per second
+    // A. CALCULATE ACTUAL SPEED
+    long currentCount = encoderCount;
+    long deltaTicks = currentCount - lastEncoderCount;
     float ticksPerSec = deltaTicks / dtSec;
+    
+    // Reverse disabled, so speed is always positive
+    actualRPM = (ticksPerSec / ENCODER_TICKS_PER_REV) * 60.0;
 
-    // rev per second
-    float revPerSec = ticksPerSec / ENCODER_TICKS_PER_REV;
+    // B. PID CALCULATION
+    float error = commandedRPM - actualRPM;
+    
+    // Proportional
+    float P = Kp * error;
 
-    // RPM (always positive from encoder, sign added from command)
-    float rpmUnsigned = revPerSec * 60.0;
+    // Integral
+    integralSum += (error * dtSec);
+    // Anti-windup
+    if (integralSum >  100) integralSum =  100; 
+    if (integralSum < -100) integralSum = -100;
+    float I = Ki * integralSum;
 
-    // Give the speed a sign depending on commanded direction
-    if (commandedRPM < 0) {
-      actualRPM = -rpmUnsigned;
-    } else {
-      actualRPM = rpmUnsigned;
-    }
+    // Derivative
+    float D = Kd * ((error - lastError) / dtSec);
+    lastError = error;
 
-    // Print feedback
-    Serial.print("CMD RPM: ");
-    Serial.print(commandedRPM, 2);
-    Serial.print(" | ACTUAL RPM: ");
-    Serial.println(actualRPM, 2);
+    // Output
+    float output = P + I + D;
 
-    // Update history
+    // C. APPLY TO MOTOR
+    runMotorDriver(output);
+
+    // D. DEBUG
+    Serial.print("Tgt: "); Serial.print(commandedRPM);
+    Serial.print(" | Act: "); Serial.print(actualRPM);
+    Serial.print(" | PWM: "); Serial.println(output);
+
     lastEncoderCount = currentCount;
-    lastSpeedTimeMs  = nowMs;
+    lastSpeedTimeMs = nowMs;
   }
 }
 
-// -------- MOTOR CONTROL FUNCTION --------
-void setMotorSpeed(float rpm) {
-  // Safety clamp
-  if (rpm >  MAX_MOTOR_RPM) rpm =  MAX_MOTOR_RPM;
-  if (rpm < -MAX_MOTOR_RPM) rpm = -MAX_MOTOR_RPM;
+// -------- MOTOR DRIVER HELPER --------
+void runMotorDriver(float pwmVal) {
+  // Output Safety: If PID outputs negative (braking), just stop.
+  if (pwmVal < 0) {
+    pwmVal = 0; 
+  }
+  
+  // Cap at 255
+  if (pwmVal > 255) pwmVal = 255;
 
-  commandedRPM = rpm;  // store last command
-
-  // 1. Set direction
-  if (rpm > 0) {
-    // Forward
+  if (pwmVal > 0) {
+    // Forward Configuration
     digitalWrite(L298N_in1, HIGH);
     digitalWrite(L298N_in2, LOW);
-    Serial.print("Direction: FORWARD | ");
-  } 
-  else if (rpm < 0) {
-    // Reverse
-    digitalWrite(L298N_in1, LOW);
-    digitalWrite(L298N_in2, HIGH);
-    Serial.print("Direction: REVERSE | ");
-  } 
-  else {
-    // Stop
+    analogWrite(L298N_enA, (int)pwmVal);
+  } else {
+    // Stop / Coast
     digitalWrite(L298N_in1, LOW);
     digitalWrite(L298N_in2, LOW);
     analogWrite(L298N_enA, 0);
-    Serial.println("Motor STOPPED");
-    return;
   }
-
-  // 2. Calculate PWM from RPM (linear mapping)
-  float rpmAbs = fabs(rpm);
-  int pwmValue = (int)((rpmAbs / MAX_MOTOR_RPM) * MAX_PWM);
-
-  if (pwmValue > MAX_PWM) pwmValue = MAX_PWM;
-
-  // 3. Apply PWM
-  analogWrite(L298N_enA, pwmValue);
-
-  // Debug
-  Serial.print("Target RPM: ");
-  Serial.print(rpm);
-  Serial.print(" | PWM Sent: ");
-  Serial.println(pwmValue);
 }
