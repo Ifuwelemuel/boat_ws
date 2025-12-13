@@ -1,0 +1,148 @@
+[0.000000] (-) TimerEvent: {}
+[0.001683] (my_boat_bringup) JobQueued: {'identifier': 'my_boat_bringup', 'dependencies': OrderedDict()}
+[0.002251] (my_boat_driver) JobQueued: {'identifier': 'my_boat_driver', 'dependencies': OrderedDict()}
+[0.002928] (my_boat_teleop) JobQueued: {'identifier': 'my_boat_teleop', 'dependencies': OrderedDict()}
+[0.003237] (my_boat_bringup) JobStarted: {'identifier': 'my_boat_bringup'}
+[0.031134] (my_boat_driver) JobStarted: {'identifier': 'my_boat_driver'}
+[0.061577] (my_boat_teleop) JobStarted: {'identifier': 'my_boat_teleop'}
+[0.095782] (my_boat_bringup) JobProgress: {'identifier': 'my_boat_bringup', 'progress': 'cmake'}
+[0.098898] (my_boat_bringup) JobProgress: {'identifier': 'my_boat_bringup', 'progress': 'build'}
+[0.099109] (-) TimerEvent: {}
+[0.102093] (my_boat_bringup) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/raspberry/boat_ws/build/my_boat_bringup', '--', '-j4', '-l4'], 'cwd': '/home/raspberry/boat_ws/build/my_boat_bringup', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'raspberry'), ('SSH_CLIENT', '192.168.3.66 56211 22'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/raspberry'), ('OLDPWD', '/home/raspberry'), ('SSH_TTY', '/dev/pts/3'), ('ROS_PYTHON_VERSION', '3'), ('LC_CTYPE', 'UTF-8'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLCON_PREFIX_PATH', '/home/raspberry/boat_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'raspberry'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '4'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/raspberry/boat_ws/install/my_boat_teleop:/home/raspberry/boat_ws/install/my_boat_driver:/home/raspberry/boat_ws/install/my_boat_bringup:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/raspberry/boat_ws/build/my_boat_bringup'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '192.168.3.66 56211 192.168.3.99 22'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/raspberry/boat_ws/install/my_boat_teleop/lib/python3.10/site-packages:/home/raspberry/boat_ws/install/my_boat_driver/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/raspberry/boat_ws/install/my_boat_bringup:/home/raspberry/boat_ws/install/my_boat_teleop:/home/raspberry/boat_ws/install/my_boat_driver:/opt/ros/humble')]), 'shell': False}
+[0.199329] (-) TimerEvent: {}
+[0.300258] (-) TimerEvent: {}
+[0.401056] (-) TimerEvent: {}
+[0.501796] (-) TimerEvent: {}
+[0.602503] (-) TimerEvent: {}
+[0.703368] (-) TimerEvent: {}
+[0.804107] (-) TimerEvent: {}
+[0.904984] (-) TimerEvent: {}
+[1.006509] (-) TimerEvent: {}
+[1.109557] (-) TimerEvent: {}
+[1.212943] (-) TimerEvent: {}
+[1.313694] (-) TimerEvent: {}
+[1.414388] (-) TimerEvent: {}
+[1.515301] (-) TimerEvent: {}
+[1.616650] (-) TimerEvent: {}
+[1.717610] (-) TimerEvent: {}
+[1.818401] (-) TimerEvent: {}
+[1.919234] (-) TimerEvent: {}
+[2.019958] (-) TimerEvent: {}
+[2.120661] (-) TimerEvent: {}
+[2.221371] (-) TimerEvent: {}
+[2.322073] (-) TimerEvent: {}
+[2.422816] (-) TimerEvent: {}
+[2.523533] (-) TimerEvent: {}
+[2.624231] (-) TimerEvent: {}
+[2.725085] (-) TimerEvent: {}
+[2.819969] (my_boat_bringup) CommandEnded: {'returncode': 0}
+[2.822273] (my_boat_bringup) JobProgress: {'identifier': 'my_boat_bringup', 'progress': 'install'}
+[2.825270] (-) TimerEvent: {}
+[2.854001] (my_boat_bringup) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/raspberry/boat_ws/build/my_boat_bringup'], 'cwd': '/home/raspberry/boat_ws/build/my_boat_bringup', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'raspberry'), ('SSH_CLIENT', '192.168.3.66 56211 22'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/raspberry'), ('OLDPWD', '/home/raspberry'), ('SSH_TTY', '/dev/pts/3'), ('ROS_PYTHON_VERSION', '3'), ('LC_CTYPE', 'UTF-8'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLCON_PREFIX_PATH', '/home/raspberry/boat_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'raspberry'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '4'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/raspberry/boat_ws/install/my_boat_teleop:/home/raspberry/boat_ws/install/my_boat_driver:/home/raspberry/boat_ws/install/my_boat_bringup:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/raspberry/boat_ws/build/my_boat_bringup'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '192.168.3.66 56211 192.168.3.99 22'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/raspberry/boat_ws/install/my_boat_teleop/lib/python3.10/site-packages:/home/raspberry/boat_ws/install/my_boat_driver/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/raspberry/boat_ws/install/my_boat_bringup:/home/raspberry/boat_ws/install/my_boat_teleop:/home/raspberry/boat_ws/install/my_boat_driver:/opt/ros/humble')]), 'shell': False}
+[2.890051] (my_boat_bringup) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[2.892730] (my_boat_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/raspberry/boat_ws/install/my_boat_bringup/share/my_boat_bringup/launch\n'}
+[2.894926] (my_boat_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/raspberry/boat_ws/install/my_boat_bringup/share/my_boat_bringup/launch/bringup.launch.py\n'}
+[2.899445] (my_boat_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/raspberry/boat_ws/install/my_boat_bringup/share/ament_index/resource_index/package_run_dependencies/my_boat_bringup\n'}
+[2.900598] (my_boat_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/raspberry/boat_ws/install/my_boat_bringup/share/ament_index/resource_index/parent_prefix_path/my_boat_bringup\n'}
+[2.901322] (my_boat_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/raspberry/boat_ws/install/my_boat_bringup/share/my_boat_bringup/environment/ament_prefix_path.sh\n'}
+[2.901967] (my_boat_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/raspberry/boat_ws/install/my_boat_bringup/share/my_boat_bringup/environment/ament_prefix_path.dsv\n'}
+[2.905227] (my_boat_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/raspberry/boat_ws/install/my_boat_bringup/share/my_boat_bringup/environment/path.sh\n'}
+[2.908498] (my_boat_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/raspberry/boat_ws/install/my_boat_bringup/share/my_boat_bringup/environment/path.dsv\n'}
+[2.909775] (my_boat_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/raspberry/boat_ws/install/my_boat_bringup/share/my_boat_bringup/local_setup.bash\n'}
+[2.910782] (my_boat_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/raspberry/boat_ws/install/my_boat_bringup/share/my_boat_bringup/local_setup.sh\n'}
+[2.912407] (my_boat_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/raspberry/boat_ws/install/my_boat_bringup/share/my_boat_bringup/local_setup.zsh\n'}
+[2.913211] (my_boat_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/raspberry/boat_ws/install/my_boat_bringup/share/my_boat_bringup/local_setup.dsv\n'}
+[2.915468] (my_boat_bringup) StdoutLine: {'line': b'-- Installing: /home/raspberry/boat_ws/install/my_boat_bringup/share/my_boat_bringup/package.dsv\n'}
+[2.916522] (my_boat_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/raspberry/boat_ws/install/my_boat_bringup/share/ament_index/resource_index/packages/my_boat_bringup\n'}
+[2.917755] (my_boat_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/raspberry/boat_ws/install/my_boat_bringup/share/my_boat_bringup/cmake/my_boat_bringupConfig.cmake\n'}
+[2.918944] (my_boat_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/raspberry/boat_ws/install/my_boat_bringup/share/my_boat_bringup/cmake/my_boat_bringupConfig-version.cmake\n'}
+[2.919844] (my_boat_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/raspberry/boat_ws/install/my_boat_bringup/share/my_boat_bringup/package.xml\n'}
+[2.920874] (my_boat_bringup) CommandEnded: {'returncode': 0}
+[2.925945] (-) TimerEvent: {}
+[3.018591] (my_boat_bringup) JobEnded: {'identifier': 'my_boat_bringup', 'rc': 0}
+[3.026149] (-) TimerEvent: {}
+[3.127016] (-) TimerEvent: {}
+[3.227849] (-) TimerEvent: {}
+[3.329359] (-) TimerEvent: {}
+[3.430701] (-) TimerEvent: {}
+[3.532071] (-) TimerEvent: {}
+[3.633318] (-) TimerEvent: {}
+[3.734609] (-) TimerEvent: {}
+[3.835691] (-) TimerEvent: {}
+[3.936798] (-) TimerEvent: {}
+[4.038031] (-) TimerEvent: {}
+[4.139231] (-) TimerEvent: {}
+[4.240394] (-) TimerEvent: {}
+[4.342294] (-) TimerEvent: {}
+[4.443537] (-) TimerEvent: {}
+[4.544665] (-) TimerEvent: {}
+[4.646344] (-) TimerEvent: {}
+[4.749752] (-) TimerEvent: {}
+[4.805969] (my_boat_driver) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/my_boat_driver', 'build', '--build-base', '/home/raspberry/boat_ws/build/my_boat_driver/build', 'install', '--record', '/home/raspberry/boat_ws/build/my_boat_driver/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/raspberry/boat_ws/src/my_boat_driver', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'raspberry', 'SSH_CLIENT': '192.168.3.66 56211 22', 'XDG_SESSION_TYPE': 'tty', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib', 'MOTD_SHOWN': 'pam', 'HOME': '/home/raspberry', 'OLDPWD': '/home/raspberry', 'SSH_TTY': '/dev/pts/3', 'ROS_PYTHON_VERSION': '3', 'LC_CTYPE': 'UTF-8', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLCON_PREFIX_PATH': '/home/raspberry/boat_ws/install', 'ROS_DISTRO': 'humble', 'LOGNAME': 'raspberry', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '4', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'XDG_RUNTIME_DIR': '/run/user/1000', 'LANG': 'en_US.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'AMENT_PREFIX_PATH': '/home/raspberry/boat_ws/install/my_boat_teleop:/home/raspberry/boat_ws/install/my_boat_driver:/home/raspberry/boat_ws/install/my_boat_bringup:/opt/ros/humble', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'PWD': '/home/raspberry/boat_ws/build/my_boat_driver', 'LC_ALL': 'en_US.UTF-8', 'SSH_CONNECTION': '192.168.3.66 56211 192.168.3.99 22', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/raspberry/boat_ws/build/my_boat_driver/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/raspberry/boat_ws/install/my_boat_driver/lib/python3.10/site-packages:/home/raspberry/boat_ws/install/my_boat_teleop/lib/python3.10/site-packages:/home/raspberry/boat_ws/install/my_boat_driver/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/home/raspberry/boat_ws/install/my_boat_bringup'}, 'shell': False}
+[4.819791] (my_boat_teleop) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/my_boat_teleop', 'build', '--build-base', '/home/raspberry/boat_ws/build/my_boat_teleop/build', 'install', '--record', '/home/raspberry/boat_ws/build/my_boat_teleop/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/raspberry/boat_ws/src/my_boat_teleop', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'raspberry', 'SSH_CLIENT': '192.168.3.66 56211 22', 'XDG_SESSION_TYPE': 'tty', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib', 'MOTD_SHOWN': 'pam', 'HOME': '/home/raspberry', 'OLDPWD': '/home/raspberry', 'SSH_TTY': '/dev/pts/3', 'ROS_PYTHON_VERSION': '3', 'LC_CTYPE': 'UTF-8', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLCON_PREFIX_PATH': '/home/raspberry/boat_ws/install', 'ROS_DISTRO': 'humble', 'LOGNAME': 'raspberry', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '4', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'XDG_RUNTIME_DIR': '/run/user/1000', 'LANG': 'en_US.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'AMENT_PREFIX_PATH': '/home/raspberry/boat_ws/install/my_boat_teleop:/home/raspberry/boat_ws/install/my_boat_driver:/home/raspberry/boat_ws/install/my_boat_bringup:/opt/ros/humble', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'PWD': '/home/raspberry/boat_ws/build/my_boat_teleop', 'LC_ALL': 'en_US.UTF-8', 'SSH_CONNECTION': '192.168.3.66 56211 192.168.3.99 22', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/raspberry/boat_ws/build/my_boat_teleop/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/raspberry/boat_ws/install/my_boat_teleop/lib/python3.10/site-packages:/home/raspberry/boat_ws/install/my_boat_teleop/lib/python3.10/site-packages:/home/raspberry/boat_ws/install/my_boat_driver/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/home/raspberry/boat_ws/install/my_boat_bringup'}, 'shell': False}
+[4.849924] (-) TimerEvent: {}
+[4.952104] (-) TimerEvent: {}
+[5.053382] (-) TimerEvent: {}
+[5.155503] (-) TimerEvent: {}
+[5.256772] (-) TimerEvent: {}
+[5.357916] (-) TimerEvent: {}
+[5.459095] (-) TimerEvent: {}
+[5.560007] (-) TimerEvent: {}
+[5.661213] (-) TimerEvent: {}
+[5.762038] (-) TimerEvent: {}
+[5.862829] (-) TimerEvent: {}
+[5.963678] (-) TimerEvent: {}
+[6.064579] (-) TimerEvent: {}
+[6.103813] (my_boat_driver) StdoutLine: {'line': b'running egg_info\n'}
+[6.107595] (my_boat_driver) StdoutLine: {'line': b'writing ../../build/my_boat_driver/my_boat_driver.egg-info/PKG-INFO\n'}
+[6.109134] (my_boat_driver) StdoutLine: {'line': b'writing dependency_links to ../../build/my_boat_driver/my_boat_driver.egg-info/dependency_links.txt\n'}
+[6.110717] (my_boat_teleop) StdoutLine: {'line': b'running egg_info\n'}
+[6.112556] (my_boat_driver) StdoutLine: {'line': b'writing entry points to ../../build/my_boat_driver/my_boat_driver.egg-info/entry_points.txt\n'}
+[6.113199] (my_boat_driver) StdoutLine: {'line': b'writing requirements to ../../build/my_boat_driver/my_boat_driver.egg-info/requires.txt\n'}
+[6.113668] (my_boat_driver) StdoutLine: {'line': b'writing top-level names to ../../build/my_boat_driver/my_boat_driver.egg-info/top_level.txt\n'}
+[6.114326] (my_boat_teleop) StdoutLine: {'line': b'writing ../../build/my_boat_teleop/my_boat_teleop.egg-info/PKG-INFO\n'}
+[6.115409] (my_boat_teleop) StdoutLine: {'line': b'writing dependency_links to ../../build/my_boat_teleop/my_boat_teleop.egg-info/dependency_links.txt\n'}
+[6.116432] (my_boat_teleop) StdoutLine: {'line': b'writing entry points to ../../build/my_boat_teleop/my_boat_teleop.egg-info/entry_points.txt\n'}
+[6.117335] (my_boat_teleop) StdoutLine: {'line': b'writing requirements to ../../build/my_boat_teleop/my_boat_teleop.egg-info/requires.txt\n'}
+[6.118094] (my_boat_teleop) StdoutLine: {'line': b'writing top-level names to ../../build/my_boat_teleop/my_boat_teleop.egg-info/top_level.txt\n'}
+[6.121220] (my_boat_driver) StdoutLine: {'line': b"reading manifest file '../../build/my_boat_driver/my_boat_driver.egg-info/SOURCES.txt'\n"}
+[6.122887] (my_boat_driver) StdoutLine: {'line': b"adding license file 'LICENSE'\n"}
+[6.125781] (my_boat_driver) StdoutLine: {'line': b"writing manifest file '../../build/my_boat_driver/my_boat_driver.egg-info/SOURCES.txt'\n"}
+[6.126553] (my_boat_driver) StdoutLine: {'line': b'running build\n'}
+[6.127258] (my_boat_driver) StdoutLine: {'line': b'running build_py\n'}
+[6.127676] (my_boat_teleop) StdoutLine: {'line': b"reading manifest file '../../build/my_boat_teleop/my_boat_teleop.egg-info/SOURCES.txt'\n"}
+[6.128539] (my_boat_driver) StdoutLine: {'line': b'running install\n'}
+[6.129364] (my_boat_teleop) StdoutLine: {'line': b"adding license file 'LICENSE'\n"}
+[6.130275] (my_boat_driver) StdoutLine: {'line': b'running install_lib\n'}
+[6.132531] (my_boat_teleop) StdoutLine: {'line': b"writing manifest file '../../build/my_boat_teleop/my_boat_teleop.egg-info/SOURCES.txt'\n"}
+[6.133532] (my_boat_teleop) StdoutLine: {'line': b'running build\n'}
+[6.133977] (my_boat_teleop) StdoutLine: {'line': b'running build_py\n'}
+[6.134652] (my_boat_teleop) StdoutLine: {'line': b'copying my_boat_teleop/teleop_keyboard_node.py -> /home/raspberry/boat_ws/build/my_boat_teleop/build/lib/my_boat_teleop\n'}
+[6.135961] (my_boat_teleop) StdoutLine: {'line': b'running install\n'}
+[6.137256] (my_boat_teleop) StdoutLine: {'line': b'running install_lib\n'}
+[6.138065] (my_boat_driver) StdoutLine: {'line': b'running install_data\n'}
+[6.138820] (my_boat_driver) StdoutLine: {'line': b'running install_egg_info\n'}
+[6.141301] (my_boat_teleop) StdoutLine: {'line': b'copying /home/raspberry/boat_ws/build/my_boat_teleop/build/lib/my_boat_teleop/teleop_keyboard_node.py -> /home/raspberry/boat_ws/install/my_boat_teleop/lib/python3.10/site-packages/my_boat_teleop\n'}
+[6.144625] (my_boat_teleop) StdoutLine: {'line': b'byte-compiling /home/raspberry/boat_ws/install/my_boat_teleop/lib/python3.10/site-packages/my_boat_teleop/teleop_keyboard_node.py to teleop_keyboard_node.cpython-310.pyc\n'}
+[6.150657] (my_boat_teleop) StdoutLine: {'line': b'running install_data\n'}
+[6.151597] (my_boat_teleop) StdoutLine: {'line': b'running install_egg_info\n'}
+[6.152373] (my_boat_driver) StdoutLine: {'line': b"removing '/home/raspberry/boat_ws/install/my_boat_driver/lib/python3.10/site-packages/my_boat_driver-0.0.0-py3.10.egg-info' (and everything under it)\n"}
+[6.154200] (my_boat_driver) StdoutLine: {'line': b'Copying ../../build/my_boat_driver/my_boat_driver.egg-info to /home/raspberry/boat_ws/install/my_boat_driver/lib/python3.10/site-packages/my_boat_driver-0.0.0-py3.10.egg-info\n'}
+[6.164196] (my_boat_driver) StdoutLine: {'line': b'running install_scripts\n'}
+[6.165012] (-) TimerEvent: {}
+[6.166355] (my_boat_teleop) StdoutLine: {'line': b"removing '/home/raspberry/boat_ws/install/my_boat_teleop/lib/python3.10/site-packages/my_boat_teleop-0.0.0-py3.10.egg-info' (and everything under it)\n"}
+[6.167228] (my_boat_teleop) StdoutLine: {'line': b'Copying ../../build/my_boat_teleop/my_boat_teleop.egg-info to /home/raspberry/boat_ws/install/my_boat_teleop/lib/python3.10/site-packages/my_boat_teleop-0.0.0-py3.10.egg-info\n'}
+[6.174993] (my_boat_teleop) StdoutLine: {'line': b'running install_scripts\n'}
+[6.251071] (my_boat_driver) StdoutLine: {'line': b'Installing motor_driver_node script to /home/raspberry/boat_ws/install/my_boat_driver/lib/my_boat_driver\n'}
+[6.252239] (my_boat_driver) StdoutLine: {'line': b'Installing motor_driver_test script to /home/raspberry/boat_ws/install/my_boat_driver/lib/my_boat_driver\n'}
+[6.254135] (my_boat_driver) StdoutLine: {'line': b"writing list of installed files to '/home/raspberry/boat_ws/build/my_boat_driver/install.log'\n"}
+[6.265319] (-) TimerEvent: {}
+[6.268194] (my_boat_teleop) StdoutLine: {'line': b'Installing teleop_keyboard_node script to /home/raspberry/boat_ws/install/my_boat_teleop/lib/my_boat_teleop\n'}
+[6.271156] (my_boat_teleop) StdoutLine: {'line': b"writing list of installed files to '/home/raspberry/boat_ws/build/my_boat_teleop/install.log'\n"}
+[6.365778] (-) TimerEvent: {}
+[6.456877] (my_boat_driver) CommandEnded: {'returncode': 0}
+[6.466357] (-) TimerEvent: {}
+[6.489898] (my_boat_driver) JobEnded: {'identifier': 'my_boat_driver', 'rc': 0}
+[6.495456] (my_boat_teleop) CommandEnded: {'returncode': 0}
+[6.530108] (my_boat_teleop) JobEnded: {'identifier': 'my_boat_teleop', 'rc': 0}
+[6.532913] (-) EventReactorShutdown: {}

@@ -58,7 +58,7 @@ def main():
 
     last_msg = Twist()
     last_key = None
-    next_publish_time = time.monotonic()
+    last_cmd_time = time.monotonic()
 
     try:
         while rclpy.ok():
@@ -83,7 +83,7 @@ def main():
 
                 pub.publish(last_msg)
                 last_key = key if key != 'x' else None
-                next_publish_time = time.monotonic() + repeat_period
+                last_cmd_time = time.monotonic()
 
                 node.get_logger().info(
                     f"Key: {key} | left={left_output:.2f}, right={right_output:.2f} "
@@ -94,9 +94,11 @@ def main():
                 break
             else:
                 now = time.monotonic()
-                if last_key and now >= next_publish_time:
+                if last_key and (now - last_cmd_time > 0.2):
+                    last_msg = Twist()  # Reset to zeros after timeout
+                    last_key = None
                     pub.publish(last_msg)
-                    next_publish_time = now + repeat_period
+                    last_cmd_time = now
 
             time.sleep(0.01)
 

@@ -19,7 +19,6 @@ class BoatBaseController(Node):
         self.declare_parameter('prop_radius', 0.03)     # propeller radius (m)
         self.declare_parameter('max_rpm', 60.0)         # <= your motor limit
         self.declare_parameter('cmd_timeout', 0.3)      # seconds, stop if no cmd_vel
-        self.declare_parameter('min_turn_ratio', 0.3)   # keep inner motor running while turning
         
         self.serial_port = self.get_parameter('port').value
         self.baudrate = self.get_parameter('baudrate').value
@@ -27,7 +26,7 @@ class BoatBaseController(Node):
         self.prop_radius = float(self.get_parameter('prop_radius').value)
         self.max_rpm = float(self.get_parameter('max_rpm').value)
         self.cmd_timeout = float(self.get_parameter('cmd_timeout').value)
-        self.min_turn_ratio = float(self.get_parameter('min_turn_ratio').value)
+    
         
         # open the serial monitor 
         self.ser = None
@@ -115,18 +114,6 @@ class BoatBaseController(Node):
         rpm_left = max(min(rpm_left, self.max_rpm), -self.max_rpm)
         rpm_right = max(min(rpm_right, self.max_rpm), -self.max_rpm)
         
-        # Keep the "inside" motor spinning instead of stopping when turning.
-        # While moving forward/backwards, apply a floor so the inner motor keeps
-        # at least a fraction of the outer motor's speed instead of dropping to 0
-        # or reversing due to angular velocity.
-        
-        primary_direction = math.copysign(1.0, v) if abs(v) > 1e-3 else None
-        outer_abs = max(abs(rpm_left), abs(rpm_right))
-        if primary_direction is not None and outer_abs > 0.0:
-            min_rpm = outer_abs * max(self.min_turn_ratio, 0.0)
-
-            rpm_left = primary_direction * max(min_rpm, min(abs(rpm_left), outer_abs))
-            rpm_right = primary_direction * max(min_rpm, min(abs(rpm_right), outer_abs))
 
         return rpm_left, rpm_right
 

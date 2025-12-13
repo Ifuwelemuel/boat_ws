@@ -1,0 +1,25 @@
+[4.761s] Invoking command in '/home/raspberry/boat_ws/src/my_boat_teleop': PYTHONPATH=/home/raspberry/boat_ws/build/my_boat_teleop/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/raspberry/boat_ws/install/my_boat_teleop/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/my_boat_teleop build --build-base /home/raspberry/boat_ws/build/my_boat_teleop/build install --record /home/raspberry/boat_ws/build/my_boat_teleop/install.log --single-version-externally-managed install_data
+[6.049s] running egg_info
+[6.053s] writing ../../build/my_boat_teleop/my_boat_teleop.egg-info/PKG-INFO
+[6.054s] writing dependency_links to ../../build/my_boat_teleop/my_boat_teleop.egg-info/dependency_links.txt
+[6.055s] writing entry points to ../../build/my_boat_teleop/my_boat_teleop.egg-info/entry_points.txt
+[6.056s] writing requirements to ../../build/my_boat_teleop/my_boat_teleop.egg-info/requires.txt
+[6.056s] writing top-level names to ../../build/my_boat_teleop/my_boat_teleop.egg-info/top_level.txt
+[6.066s] reading manifest file '../../build/my_boat_teleop/my_boat_teleop.egg-info/SOURCES.txt'
+[6.068s] adding license file 'LICENSE'
+[6.071s] writing manifest file '../../build/my_boat_teleop/my_boat_teleop.egg-info/SOURCES.txt'
+[6.072s] running build
+[6.072s] running build_py
+[6.073s] copying my_boat_teleop/teleop_keyboard_node.py -> /home/raspberry/boat_ws/build/my_boat_teleop/build/lib/my_boat_teleop
+[6.074s] running install
+[6.076s] running install_lib
+[6.080s] copying /home/raspberry/boat_ws/build/my_boat_teleop/build/lib/my_boat_teleop/teleop_keyboard_node.py -> /home/raspberry/boat_ws/install/my_boat_teleop/lib/python3.10/site-packages/my_boat_teleop
+[6.083s] byte-compiling /home/raspberry/boat_ws/install/my_boat_teleop/lib/python3.10/site-packages/my_boat_teleop/teleop_keyboard_node.py to teleop_keyboard_node.cpython-310.pyc
+[6.089s] running install_data
+[6.090s] running install_egg_info
+[6.105s] removing '/home/raspberry/boat_ws/install/my_boat_teleop/lib/python3.10/site-packages/my_boat_teleop-0.0.0-py3.10.egg-info' (and everything under it)
+[6.105s] Copying ../../build/my_boat_teleop/my_boat_teleop.egg-info to /home/raspberry/boat_ws/install/my_boat_teleop/lib/python3.10/site-packages/my_boat_teleop-0.0.0-py3.10.egg-info
+[6.114s] running install_scripts
+[6.207s] Installing teleop_keyboard_node script to /home/raspberry/boat_ws/install/my_boat_teleop/lib/my_boat_teleop
+[6.210s] writing list of installed files to '/home/raspberry/boat_ws/build/my_boat_teleop/install.log'
+[6.434s] Invoked command in '/home/raspberry/boat_ws/src/my_boat_teleop' returned '0': PYTHONPATH=/home/raspberry/boat_ws/build/my_boat_teleop/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/raspberry/boat_ws/install/my_boat_teleop/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/my_boat_teleop build --build-base /home/raspberry/boat_ws/build/my_boat_teleop/build install --record /home/raspberry/boat_ws/build/my_boat_teleop/install.log --single-version-externally-managed install_data
