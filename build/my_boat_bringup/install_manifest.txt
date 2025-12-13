@@ -1,3 +1,4 @@
+/home/raspberry/boat_ws/install/my_boat_bringup/share/my_boat_bringup/launch/bringup.launch.py
 /home/raspberry/boat_ws/install/my_boat_bringup/share/ament_index/resource_index/package_run_dependencies/my_boat_bringup
 /home/raspberry/boat_ws/install/my_boat_bringup/share/ament_index/resource_index/parent_prefix_path/my_boat_bringup
 /home/raspberry/boat_ws/install/my_boat_bringup/share/my_boat_bringup/environment/ament_prefix_path.sh
