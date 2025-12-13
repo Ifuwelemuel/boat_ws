@@ -1,0 +1,259 @@
+[0.558s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--symlink-install']
+[0.558s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=True, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=4, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0xffff7f941900>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0xffff7fac6890>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0xffff7fac6890>>, mixin_verb=('build',))
+[1.392s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[1.393s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[1.393s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[1.393s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[1.393s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[1.394s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[1.394s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/raspberry/boat_ws'
+[1.394s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[1.395s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[1.395s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[1.395s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[1.395s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[1.396s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[1.396s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[1.396s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[1.396s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[1.439s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[1.439s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[1.439s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[1.440s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[1.440s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[1.440s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[1.441s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[1.441s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[1.442s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[1.442s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[1.442s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[1.443s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[1.444s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[1.444s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[1.444s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[1.445s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[1.445s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[1.445s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[1.445s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[1.446s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[1.446s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[1.446s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[1.446s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[1.446s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[1.446s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[1.447s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[1.447s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[1.447s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[1.448s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_boat_bringup) by extensions ['ignore', 'ignore_ament_install']
+[1.448s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_boat_bringup) by extension 'ignore'
+[1.448s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_boat_bringup) by extension 'ignore_ament_install'
+[1.448s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_boat_bringup) by extensions ['colcon_pkg']
+[1.449s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_boat_bringup) by extension 'colcon_pkg'
+[1.449s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_boat_bringup) by extensions ['colcon_meta']
+[1.449s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_boat_bringup) by extension 'colcon_meta'
+[1.449s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_boat_bringup) by extensions ['ros']
+[1.449s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_boat_bringup) by extension 'ros'
+[1.459s] DEBUG:colcon.colcon_core.package_identification:Package 'src/my_boat_bringup' with type 'ros.ament_cmake' and name 'my_boat_bringup'
+[1.460s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_boat_driver) by extensions ['ignore', 'ignore_ament_install']
+[1.461s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_boat_driver) by extension 'ignore'
+[1.461s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_boat_driver) by extension 'ignore_ament_install'
+[1.461s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_boat_driver) by extensions ['colcon_pkg']
+[1.462s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_boat_driver) by extension 'colcon_pkg'
+[1.462s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_boat_driver) by extensions ['colcon_meta']
+[1.462s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_boat_driver) by extension 'colcon_meta'
+[1.462s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_boat_driver) by extensions ['ros']
+[1.463s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_boat_driver) by extension 'ros'
+[1.466s] DEBUG:colcon.colcon_core.package_identification:Package 'src/my_boat_driver' with type 'ros.ament_python' and name 'my_boat_driver'
+[1.466s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_boat_teleop) by extensions ['ignore', 'ignore_ament_install']
+[1.467s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_boat_teleop) by extension 'ignore'
+[1.467s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_boat_teleop) by extension 'ignore_ament_install'
+[1.468s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_boat_teleop) by extensions ['colcon_pkg']
+[1.468s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_boat_teleop) by extension 'colcon_pkg'
+[1.468s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_boat_teleop) by extensions ['colcon_meta']
+[1.469s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_boat_teleop) by extension 'colcon_meta'
+[1.469s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_boat_teleop) by extensions ['ros']
+[1.469s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_boat_teleop) by extension 'ros'
+[1.473s] DEBUG:colcon.colcon_core.package_identification:Package 'src/my_boat_teleop' with type 'ros.ament_python' and name 'my_boat_teleop'
+[1.473s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[1.473s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[1.473s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[1.474s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[1.474s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[1.594s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[1.594s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[1.604s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 3 installed packages in /home/raspberry/boat_ws/install
+[1.612s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 271 installed packages in /opt/ros/humble
+[1.619s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[1.787s] Level 5:colcon.colcon_core.verb:set package 'my_boat_bringup' build argument 'cmake_args' from command line to 'None'
+[1.787s] Level 5:colcon.colcon_core.verb:set package 'my_boat_bringup' build argument 'cmake_target' from command line to 'None'
+[1.788s] Level 5:colcon.colcon_core.verb:set package 'my_boat_bringup' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.788s] Level 5:colcon.colcon_core.verb:set package 'my_boat_bringup' build argument 'cmake_clean_cache' from command line to 'False'
+[1.788s] Level 5:colcon.colcon_core.verb:set package 'my_boat_bringup' build argument 'cmake_clean_first' from command line to 'False'
+[1.788s] Level 5:colcon.colcon_core.verb:set package 'my_boat_bringup' build argument 'cmake_force_configure' from command line to 'False'
+[1.788s] Level 5:colcon.colcon_core.verb:set package 'my_boat_bringup' build argument 'ament_cmake_args' from command line to 'None'
+[1.788s] Level 5:colcon.colcon_core.verb:set package 'my_boat_bringup' build argument 'catkin_cmake_args' from command line to 'None'
+[1.788s] Level 5:colcon.colcon_core.verb:set package 'my_boat_bringup' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.788s] DEBUG:colcon.colcon_core.verb:Building package 'my_boat_bringup' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/raspberry/boat_ws/build/my_boat_bringup', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/raspberry/boat_ws/install/my_boat_bringup', 'merge_install': False, 'path': '/home/raspberry/boat_ws/src/my_boat_bringup', 'symlink_install': True, 'test_result_base': None}
+[1.790s] Level 5:colcon.colcon_core.verb:set package 'my_boat_driver' build argument 'cmake_args' from command line to 'None'
+[1.790s] Level 5:colcon.colcon_core.verb:set package 'my_boat_driver' build argument 'cmake_target' from command line to 'None'
+[1.790s] Level 5:colcon.colcon_core.verb:set package 'my_boat_driver' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.790s] Level 5:colcon.colcon_core.verb:set package 'my_boat_driver' build argument 'cmake_clean_cache' from command line to 'False'
+[1.790s] Level 5:colcon.colcon_core.verb:set package 'my_boat_driver' build argument 'cmake_clean_first' from command line to 'False'
+[1.791s] Level 5:colcon.colcon_core.verb:set package 'my_boat_driver' build argument 'cmake_force_configure' from command line to 'False'
+[1.791s] Level 5:colcon.colcon_core.verb:set package 'my_boat_driver' build argument 'ament_cmake_args' from command line to 'None'
+[1.791s] Level 5:colcon.colcon_core.verb:set package 'my_boat_driver' build argument 'catkin_cmake_args' from command line to 'None'
+[1.791s] Level 5:colcon.colcon_core.verb:set package 'my_boat_driver' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.791s] DEBUG:colcon.colcon_core.verb:Building package 'my_boat_driver' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/raspberry/boat_ws/build/my_boat_driver', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/raspberry/boat_ws/install/my_boat_driver', 'merge_install': False, 'path': '/home/raspberry/boat_ws/src/my_boat_driver', 'symlink_install': True, 'test_result_base': None}
+[1.793s] Level 5:colcon.colcon_core.verb:set package 'my_boat_teleop' build argument 'cmake_args' from command line to 'None'
+[1.793s] Level 5:colcon.colcon_core.verb:set package 'my_boat_teleop' build argument 'cmake_target' from command line to 'None'
+[1.793s] Level 5:colcon.colcon_core.verb:set package 'my_boat_teleop' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.793s] Level 5:colcon.colcon_core.verb:set package 'my_boat_teleop' build argument 'cmake_clean_cache' from command line to 'False'
+[1.793s] Level 5:colcon.colcon_core.verb:set package 'my_boat_teleop' build argument 'cmake_clean_first' from command line to 'False'
+[1.793s] Level 5:colcon.colcon_core.verb:set package 'my_boat_teleop' build argument 'cmake_force_configure' from command line to 'False'
+[1.793s] Level 5:colcon.colcon_core.verb:set package 'my_boat_teleop' build argument 'ament_cmake_args' from command line to 'None'
+[1.794s] Level 5:colcon.colcon_core.verb:set package 'my_boat_teleop' build argument 'catkin_cmake_args' from command line to 'None'
+[1.794s] Level 5:colcon.colcon_core.verb:set package 'my_boat_teleop' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.794s] DEBUG:colcon.colcon_core.verb:Building package 'my_boat_teleop' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/raspberry/boat_ws/build/my_boat_teleop', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/raspberry/boat_ws/install/my_boat_teleop', 'merge_install': False, 'path': '/home/raspberry/boat_ws/src/my_boat_teleop', 'symlink_install': True, 'test_result_base': None}
+[1.794s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[1.798s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[1.799s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/raspberry/boat_ws/src/my_boat_bringup' with build type 'ament_cmake'
+[1.800s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/raspberry/boat_ws/src/my_boat_bringup'
+[1.810s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[1.811s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.811s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.830s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/raspberry/boat_ws/src/my_boat_driver' with build type 'ament_python'
+[1.830s] Level 1:colcon.colcon_core.shell:create_environment_hook('my_boat_driver', 'ament_prefix_path')
+[1.832s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/raspberry/boat_ws/install/my_boat_driver/share/my_boat_driver/hook/ament_prefix_path.ps1'
+[1.835s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/raspberry/boat_ws/install/my_boat_driver/share/my_boat_driver/hook/ament_prefix_path.dsv'
+[1.838s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/raspberry/boat_ws/install/my_boat_driver/share/my_boat_driver/hook/ament_prefix_path.sh'
+[1.843s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.843s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.861s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/raspberry/boat_ws/src/my_boat_teleop' with build type 'ament_python'
+[1.861s] Level 1:colcon.colcon_core.shell:create_environment_hook('my_boat_teleop', 'ament_prefix_path')
+[1.863s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/raspberry/boat_ws/install/my_boat_teleop/share/my_boat_teleop/hook/ament_prefix_path.ps1'
+[1.865s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/raspberry/boat_ws/install/my_boat_teleop/share/my_boat_teleop/hook/ament_prefix_path.dsv'
+[1.867s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/raspberry/boat_ws/install/my_boat_teleop/share/my_boat_teleop/hook/ament_prefix_path.sh'
+[1.871s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.871s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.904s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/raspberry/boat_ws/build/my_boat_bringup': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/raspberry/boat_ws/install/my_boat_teleop:/home/raspberry/boat_ws/install/my_boat_driver:/opt/ros/humble /usr/bin/cmake /home/raspberry/boat_ws/src/my_boat_bringup -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/raspberry/boat_ws/install/my_boat_bringup
+[3.418s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/raspberry/boat_ws/src/my_boat_driver'
+[3.419s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[3.419s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[4.696s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/raspberry/boat_ws/src/my_boat_teleop'
+[4.697s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[4.697s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[4.718s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/raspberry/boat_ws/build/my_boat_bringup' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/raspberry/boat_ws/install/my_boat_teleop:/home/raspberry/boat_ws/install/my_boat_driver:/opt/ros/humble /usr/bin/cmake /home/raspberry/boat_ws/src/my_boat_bringup -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/raspberry/boat_ws/install/my_boat_bringup
+[4.729s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/raspberry/boat_ws/build/my_boat_bringup': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/raspberry/boat_ws/install/my_boat_teleop:/home/raspberry/boat_ws/install/my_boat_driver:/opt/ros/humble /usr/bin/cmake --build /home/raspberry/boat_ws/build/my_boat_bringup -- -j4 -l4
+[4.912s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/raspberry/boat_ws/build/my_boat_bringup' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/raspberry/boat_ws/install/my_boat_teleop:/home/raspberry/boat_ws/install/my_boat_driver:/opt/ros/humble /usr/bin/cmake --build /home/raspberry/boat_ws/build/my_boat_bringup -- -j4 -l4
+[4.972s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/raspberry/boat_ws/build/my_boat_bringup': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/raspberry/boat_ws/install/my_boat_teleop:/home/raspberry/boat_ws/install/my_boat_driver:/opt/ros/humble /usr/bin/cmake --install /home/raspberry/boat_ws/build/my_boat_bringup
+[5.800s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(my_boat_bringup)
+[5.804s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/raspberry/boat_ws/build/my_boat_bringup' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/raspberry/boat_ws/install/my_boat_teleop:/home/raspberry/boat_ws/install/my_boat_driver:/opt/ros/humble /usr/bin/cmake --install /home/raspberry/boat_ws/build/my_boat_bringup
+[5.817s] Level 1:colcon.colcon_core.environment:checking '/home/raspberry/boat_ws/install/my_boat_bringup' for CMake module files
+[5.821s] Level 1:colcon.colcon_core.environment:checking '/home/raspberry/boat_ws/install/my_boat_bringup' for CMake config files
+[5.824s] Level 1:colcon.colcon_core.shell:create_environment_hook('my_boat_bringup', 'cmake_prefix_path')
+[5.826s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/raspberry/boat_ws/install/my_boat_bringup/share/my_boat_bringup/hook/cmake_prefix_path.ps1'
+[5.830s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/raspberry/boat_ws/install/my_boat_bringup/share/my_boat_bringup/hook/cmake_prefix_path.dsv'
+[5.834s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/raspberry/boat_ws/install/my_boat_bringup/share/my_boat_bringup/hook/cmake_prefix_path.sh'
+[5.843s] Level 1:colcon.colcon_core.environment:checking '/home/raspberry/boat_ws/install/my_boat_bringup/bin'
+[5.844s] Level 1:colcon.colcon_core.environment:checking '/home/raspberry/boat_ws/install/my_boat_bringup/lib/pkgconfig/my_boat_bringup.pc'
+[5.845s] Level 1:colcon.colcon_core.environment:checking '/home/raspberry/boat_ws/install/my_boat_bringup/lib/python3.10/site-packages'
+[5.848s] Level 1:colcon.colcon_core.environment:checking '/home/raspberry/boat_ws/install/my_boat_bringup/bin'
+[5.850s] INFO:colcon.colcon_core.shell:Creating package script '/home/raspberry/boat_ws/install/my_boat_bringup/share/my_boat_bringup/package.ps1'
+[5.856s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/raspberry/boat_ws/install/my_boat_bringup/share/my_boat_bringup/package.dsv'
+[5.861s] INFO:colcon.colcon_core.shell:Creating package script '/home/raspberry/boat_ws/install/my_boat_bringup/share/my_boat_bringup/package.sh'
+[5.866s] INFO:colcon.colcon_core.shell:Creating package script '/home/raspberry/boat_ws/install/my_boat_bringup/share/my_boat_bringup/package.bash'
+[5.872s] INFO:colcon.colcon_core.shell:Creating package script '/home/raspberry/boat_ws/install/my_boat_bringup/share/my_boat_bringup/package.zsh'
+[5.877s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/raspberry/boat_ws/install/my_boat_bringup/share/colcon-core/packages/my_boat_bringup)
+[5.882s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(my_boat_bringup)
+[5.884s] Level 1:colcon.colcon_core.environment:checking '/home/raspberry/boat_ws/install/my_boat_bringup' for CMake module files
+[5.888s] Level 1:colcon.colcon_core.environment:checking '/home/raspberry/boat_ws/install/my_boat_bringup' for CMake config files
+[5.890s] Level 1:colcon.colcon_core.shell:create_environment_hook('my_boat_bringup', 'cmake_prefix_path')
+[5.891s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/raspberry/boat_ws/install/my_boat_bringup/share/my_boat_bringup/hook/cmake_prefix_path.ps1'
+[5.895s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/raspberry/boat_ws/install/my_boat_bringup/share/my_boat_bringup/hook/cmake_prefix_path.dsv'
+[5.902s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/raspberry/boat_ws/install/my_boat_bringup/share/my_boat_bringup/hook/cmake_prefix_path.sh'
+[5.906s] Level 1:colcon.colcon_core.environment:checking '/home/raspberry/boat_ws/install/my_boat_bringup/bin'
+[5.907s] Level 1:colcon.colcon_core.environment:checking '/home/raspberry/boat_ws/install/my_boat_bringup/lib/pkgconfig/my_boat_bringup.pc'
+[5.909s] Level 1:colcon.colcon_core.environment:checking '/home/raspberry/boat_ws/install/my_boat_bringup/lib/python3.10/site-packages'
+[5.911s] Level 1:colcon.colcon_core.environment:checking '/home/raspberry/boat_ws/install/my_boat_bringup/bin'
+[5.913s] INFO:colcon.colcon_core.shell:Creating package script '/home/raspberry/boat_ws/install/my_boat_bringup/share/my_boat_bringup/package.ps1'
+[5.917s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/raspberry/boat_ws/install/my_boat_bringup/share/my_boat_bringup/package.dsv'
+[5.921s] INFO:colcon.colcon_core.shell:Creating package script '/home/raspberry/boat_ws/install/my_boat_bringup/share/my_boat_bringup/package.sh'
+[5.925s] INFO:colcon.colcon_core.shell:Creating package script '/home/raspberry/boat_ws/install/my_boat_bringup/share/my_boat_bringup/package.bash'
+[5.928s] INFO:colcon.colcon_core.shell:Creating package script '/home/raspberry/boat_ws/install/my_boat_bringup/share/my_boat_bringup/package.zsh'
+[5.932s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/raspberry/boat_ws/install/my_boat_bringup/share/colcon-core/packages/my_boat_bringup)
+[6.986s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/raspberry/boat_ws/install/my_boat_teleop/share/ament_index/resource_index/packages/my_boat_teleop
+[6.987s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/raspberry/boat_ws/install/my_boat_teleop/share/my_boat_teleop/package.xml
+[6.990s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/raspberry/boat_ws/install/my_boat_teleop/lib/my_boat_teleop/teleop_keyboard_node
+[7.002s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/raspberry/boat_ws/build/my_boat_teleop': PYTHONPATH=/home/raspberry/boat_ws/build/my_boat_teleop/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/raspberry/boat_ws/install/my_boat_teleop/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/raspberry/boat_ws/build/my_boat_teleop/build --no-deps symlink_data --force
+[7.097s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/raspberry/boat_ws/install/my_boat_driver/share/ament_index/resource_index/packages/my_boat_driver
+[7.097s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/raspberry/boat_ws/install/my_boat_driver/share/my_boat_driver/package.xml
+[7.097s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/raspberry/boat_ws/install/my_boat_driver/share/my_boat_driver/launch/driver.launch.py
+[7.099s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/raspberry/boat_ws/install/my_boat_driver/lib/my_boat_driver/motor_driver_node
+[7.099s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/raspberry/boat_ws/install/my_boat_driver/lib/my_boat_driver/motor_driver_test
+[7.111s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/raspberry/boat_ws/build/my_boat_driver': PYTHONPATH=/home/raspberry/boat_ws/build/my_boat_driver/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/raspberry/boat_ws/install/my_boat_driver/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/raspberry/boat_ws/build/my_boat_driver/build --no-deps symlink_data --force
+[9.783s] Level 1:colcon.colcon_core.shell:create_environment_hook('my_boat_teleop', 'pythonpath_develop')
+[9.786s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/raspberry/boat_ws/build/my_boat_teleop/share/my_boat_teleop/hook/pythonpath_develop.ps1'
+[9.794s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/raspberry/boat_ws/build/my_boat_teleop' returned '0': PYTHONPATH=/home/raspberry/boat_ws/build/my_boat_teleop/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/raspberry/boat_ws/install/my_boat_teleop/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/raspberry/boat_ws/build/my_boat_teleop/build --no-deps symlink_data --force
+[9.802s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/raspberry/boat_ws/build/my_boat_teleop/share/my_boat_teleop/hook/pythonpath_develop.dsv'
+[9.808s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/raspberry/boat_ws/build/my_boat_teleop/share/my_boat_teleop/hook/pythonpath_develop.sh'
+[9.816s] Level 1:colcon.colcon_core.environment:checking '/home/raspberry/boat_ws/install/my_boat_teleop' for CMake module files
+[9.820s] Level 1:colcon.colcon_core.environment:checking '/home/raspberry/boat_ws/install/my_boat_teleop' for CMake config files
+[9.826s] Level 1:colcon.colcon_core.environment:checking '/home/raspberry/boat_ws/install/my_boat_teleop/lib'
+[9.829s] Level 1:colcon.colcon_core.environment:checking '/home/raspberry/boat_ws/install/my_boat_teleop/bin'
+[9.830s] Level 1:colcon.colcon_core.environment:checking '/home/raspberry/boat_ws/install/my_boat_teleop/lib/pkgconfig/my_boat_teleop.pc'
+[9.833s] Level 1:colcon.colcon_core.environment:checking '/home/raspberry/boat_ws/install/my_boat_teleop/lib/python3.10/site-packages'
+[9.834s] Level 1:colcon.colcon_core.shell:create_environment_hook('my_boat_teleop', 'pythonpath')
+[9.836s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/raspberry/boat_ws/install/my_boat_teleop/share/my_boat_teleop/hook/pythonpath.ps1'
+[9.845s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/raspberry/boat_ws/install/my_boat_teleop/share/my_boat_teleop/hook/pythonpath.dsv'
+[9.849s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/raspberry/boat_ws/install/my_boat_teleop/share/my_boat_teleop/hook/pythonpath.sh'
+[9.856s] Level 1:colcon.colcon_core.environment:checking '/home/raspberry/boat_ws/install/my_boat_teleop/bin'
+[9.856s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(my_boat_teleop)
+[9.859s] INFO:colcon.colcon_core.shell:Creating package script '/home/raspberry/boat_ws/install/my_boat_teleop/share/my_boat_teleop/package.ps1'
+[9.865s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/raspberry/boat_ws/install/my_boat_teleop/share/my_boat_teleop/package.dsv'
+[9.871s] INFO:colcon.colcon_core.shell:Creating package script '/home/raspberry/boat_ws/install/my_boat_teleop/share/my_boat_teleop/package.sh'
+[9.882s] INFO:colcon.colcon_core.shell:Creating package script '/home/raspberry/boat_ws/install/my_boat_teleop/share/my_boat_teleop/package.bash'
+[9.892s] INFO:colcon.colcon_core.shell:Creating package script '/home/raspberry/boat_ws/install/my_boat_teleop/share/my_boat_teleop/package.zsh'
+[9.901s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/raspberry/boat_ws/install/my_boat_teleop/share/colcon-core/packages/my_boat_teleop)
+[9.928s] Level 1:colcon.colcon_core.shell:create_environment_hook('my_boat_driver', 'pythonpath_develop')
+[9.929s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/raspberry/boat_ws/build/my_boat_driver/share/my_boat_driver/hook/pythonpath_develop.ps1'
+[9.931s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/raspberry/boat_ws/build/my_boat_driver' returned '0': PYTHONPATH=/home/raspberry/boat_ws/build/my_boat_driver/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/raspberry/boat_ws/install/my_boat_driver/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/raspberry/boat_ws/build/my_boat_driver/build --no-deps symlink_data --force
+[9.933s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/raspberry/boat_ws/build/my_boat_driver/share/my_boat_driver/hook/pythonpath_develop.dsv'
+[9.935s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/raspberry/boat_ws/build/my_boat_driver/share/my_boat_driver/hook/pythonpath_develop.sh'
+[9.937s] Level 1:colcon.colcon_core.environment:checking '/home/raspberry/boat_ws/install/my_boat_driver' for CMake module files
+[9.940s] Level 1:colcon.colcon_core.environment:checking '/home/raspberry/boat_ws/install/my_boat_driver' for CMake config files
+[9.945s] Level 1:colcon.colcon_core.environment:checking '/home/raspberry/boat_ws/install/my_boat_driver/lib'
+[9.945s] Level 1:colcon.colcon_core.environment:checking '/home/raspberry/boat_ws/install/my_boat_driver/bin'
+[9.946s] Level 1:colcon.colcon_core.environment:checking '/home/raspberry/boat_ws/install/my_boat_driver/lib/pkgconfig/my_boat_driver.pc'
+[9.947s] Level 1:colcon.colcon_core.environment:checking '/home/raspberry/boat_ws/install/my_boat_driver/lib/python3.10/site-packages'
+[9.947s] Level 1:colcon.colcon_core.shell:create_environment_hook('my_boat_driver', 'pythonpath')
+[9.948s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/raspberry/boat_ws/install/my_boat_driver/share/my_boat_driver/hook/pythonpath.ps1'
+[9.951s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/raspberry/boat_ws/install/my_boat_driver/share/my_boat_driver/hook/pythonpath.dsv'
+[9.953s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/raspberry/boat_ws/install/my_boat_driver/share/my_boat_driver/hook/pythonpath.sh'
+[9.958s] Level 1:colcon.colcon_core.environment:checking '/home/raspberry/boat_ws/install/my_boat_driver/bin'
+[9.959s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(my_boat_driver)
+[9.960s] INFO:colcon.colcon_core.shell:Creating package script '/home/raspberry/boat_ws/install/my_boat_driver/share/my_boat_driver/package.ps1'
+[9.964s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/raspberry/boat_ws/install/my_boat_driver/share/my_boat_driver/package.dsv'
+[9.967s] INFO:colcon.colcon_core.shell:Creating package script '/home/raspberry/boat_ws/install/my_boat_driver/share/my_boat_driver/package.sh'
+[9.970s] INFO:colcon.colcon_core.shell:Creating package script '/home/raspberry/boat_ws/install/my_boat_driver/share/my_boat_driver/package.bash'
+[9.973s] INFO:colcon.colcon_core.shell:Creating package script '/home/raspberry/boat_ws/install/my_boat_driver/share/my_boat_driver/package.zsh'
+[9.975s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/raspberry/boat_ws/install/my_boat_driver/share/colcon-core/packages/my_boat_driver)
+[9.977s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[9.978s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[9.978s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[9.979s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[10.001s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.notify_send': Could not find 'notify-send'
+[10.001s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[10.002s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[10.002s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[10.005s] DEBUG:colcon.colcon_notification.desktop_notification.notify2:Failed to initialize notify2: org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.Notifications was not provided by any .service files
+[10.005s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[10.006s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/raspberry/boat_ws/install/local_setup.ps1'
+[10.010s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/raspberry/boat_ws/install/_local_setup_util_ps1.py'
+[10.017s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/raspberry/boat_ws/install/setup.ps1'
+[10.023s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/raspberry/boat_ws/install/local_setup.sh'
+[10.026s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/raspberry/boat_ws/install/_local_setup_util_sh.py'
+[10.030s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/raspberry/boat_ws/install/setup.sh'
+[10.036s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/raspberry/boat_ws/install/local_setup.bash'
+[10.038s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/raspberry/boat_ws/install/setup.bash'
+[10.043s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/raspberry/boat_ws/install/local_setup.zsh'
+[10.046s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/raspberry/boat_ws/install/setup.zsh'

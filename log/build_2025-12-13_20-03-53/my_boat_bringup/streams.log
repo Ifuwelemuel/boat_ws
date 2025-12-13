@@ -1,0 +1,22 @@
+[0.110s] Invoking command in '/home/raspberry/boat_ws/build/my_boat_bringup': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/raspberry/boat_ws/install/my_boat_teleop:/home/raspberry/boat_ws/install/my_boat_driver:/opt/ros/humble /usr/bin/cmake --build /home/raspberry/boat_ws/build/my_boat_bringup -- -j4 -l4
+[2.635s] Invoked command in '/home/raspberry/boat_ws/build/my_boat_bringup' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/raspberry/boat_ws/install/my_boat_teleop:/home/raspberry/boat_ws/install/my_boat_driver:/opt/ros/humble /usr/bin/cmake --build /home/raspberry/boat_ws/build/my_boat_bringup -- -j4 -l4
+[2.677s] Invoking command in '/home/raspberry/boat_ws/build/my_boat_bringup': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/raspberry/boat_ws/install/my_boat_teleop:/home/raspberry/boat_ws/install/my_boat_driver:/opt/ros/humble /usr/bin/cmake --install /home/raspberry/boat_ws/build/my_boat_bringup
+[2.710s] -- Install configuration: ""
+[2.713s] -- Up-to-date: /home/raspberry/boat_ws/install/my_boat_bringup/share/my_boat_bringup/launch
+[2.713s] -- Up-to-date: /home/raspberry/boat_ws/install/my_boat_bringup/share/my_boat_bringup/launch/bringup.launch.py
+[2.714s] -- Up-to-date: /home/raspberry/boat_ws/install/my_boat_bringup/share/ament_index/resource_index/package_run_dependencies/my_boat_bringup
+[2.714s] -- Up-to-date: /home/raspberry/boat_ws/install/my_boat_bringup/share/ament_index/resource_index/parent_prefix_path/my_boat_bringup
+[2.715s] -- Up-to-date: /home/raspberry/boat_ws/install/my_boat_bringup/share/my_boat_bringup/environment/ament_prefix_path.sh
+[2.719s] -- Up-to-date: /home/raspberry/boat_ws/install/my_boat_bringup/share/my_boat_bringup/environment/ament_prefix_path.dsv
+[2.720s] -- Up-to-date: /home/raspberry/boat_ws/install/my_boat_bringup/share/my_boat_bringup/environment/path.sh
+[2.721s] -- Up-to-date: /home/raspberry/boat_ws/install/my_boat_bringup/share/my_boat_bringup/environment/path.dsv
+[2.722s] -- Up-to-date: /home/raspberry/boat_ws/install/my_boat_bringup/share/my_boat_bringup/local_setup.bash
+[2.723s] -- Up-to-date: /home/raspberry/boat_ws/install/my_boat_bringup/share/my_boat_bringup/local_setup.sh
+[2.739s] -- Up-to-date: /home/raspberry/boat_ws/install/my_boat_bringup/share/my_boat_bringup/local_setup.zsh
+[2.740s] -- Up-to-date: /home/raspberry/boat_ws/install/my_boat_bringup/share/my_boat_bringup/local_setup.dsv
+[2.740s] -- Installing: /home/raspberry/boat_ws/install/my_boat_bringup/share/my_boat_bringup/package.dsv
+[2.741s] -- Up-to-date: /home/raspberry/boat_ws/install/my_boat_bringup/share/ament_index/resource_index/packages/my_boat_bringup
+[2.753s] -- Up-to-date: /home/raspberry/boat_ws/install/my_boat_bringup/share/my_boat_bringup/cmake/my_boat_bringupConfig.cmake
+[2.754s] -- Up-to-date: /home/raspberry/boat_ws/install/my_boat_bringup/share/my_boat_bringup/cmake/my_boat_bringupConfig-version.cmake
+[2.754s] -- Up-to-date: /home/raspberry/boat_ws/install/my_boat_bringup/share/my_boat_bringup/package.xml
+[2.755s] Invoked command in '/home/raspberry/boat_ws/build/my_boat_bringup' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/raspberry/boat_ws/install/my_boat_teleop:/home/raspberry/boat_ws/install/my_boat_driver:/opt/ros/humble /usr/bin/cmake --install /home/raspberry/boat_ws/build/my_boat_bringup

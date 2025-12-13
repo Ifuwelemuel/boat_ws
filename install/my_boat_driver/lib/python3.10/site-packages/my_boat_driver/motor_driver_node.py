@@ -17,7 +17,7 @@ class BoatBaseController(Node):
         self.declare_parameter('baudrate', 115200)
         self.declare_parameter('base_width', 0.25)      # distance between motors (m)
         self.declare_parameter('prop_radius', 0.03)     # propeller radius (m)
-        self.declare_parameter('max_rpm', 60.0)         # <= your motor limit
+        self.declare_parameter('max_rpm', 100.0)         # <= your motor limit
         self.declare_parameter('cmd_timeout', 0.3)      # seconds, stop if no cmd_vel
         
         self.serial_port = self.get_parameter('port').value
@@ -92,13 +92,36 @@ class BoatBaseController(Node):
         """
         B = self.base_width
         r = self.prop_radius
+        #--------------------------------------------
+        # Calculate the raw velocity difference required for the turn
+        # delta_v is the amount added to right and subtracted from left
+        delta_v = (w * B / 2.0)
 
-        # Linear speed of each prop (m/s)
-        v_left = v - (w * B / 2.0)
-        v_right = v + (w * B / 2.0)
+        # --- MODIFICATION START ---
+        # Prevent the turn from overpowering the forward speed.
+        # We clamp delta_v so it never exceeds X% of forward velocity v.
+        # This ensures the inner motor stays spinning at (100 - X)% speed.
+        
+        if v > 0.01: 
+            # 80% limit means the inner motor drops to 20% speed at max turn.
+            # You can tune this ratio (e.g., 0.5 for 50% min speed).
+            limit_ratio = 0.8  
+            max_delta = v * limit_ratio
+            
+            # Clamp the turning component
+            if delta_v > max_delta:
+                delta_v = max_delta
+            elif delta_v < -max_delta:
+                delta_v = -max_delta
+        # --- MODIFICATION END ---
+
+        # Apply the clamped delta to get individual wheel velocities
+        v_left = v - delta_v
+        v_right = v + delta_v
 
         # Convert linear speed (m/s) -> shaft angular speed (rad/s)
         # v = r * omega  =>  omega = v / r
+        #--------------------------------------------
         if r <= 0:
             self.get_logger().warn("prop_radius <= 0, defaulting RPM to 0")
             return 0.0, 0.0

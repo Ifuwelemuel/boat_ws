@@ -1,0 +1,21 @@
+[5.280s] Invoking command in '/home/raspberry/boat_ws/build/my_boat_driver': PYTHONPATH=/home/raspberry/boat_ws/build/my_boat_driver/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/raspberry/boat_ws/install/my_boat_driver/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/raspberry/boat_ws/build/my_boat_driver/build --no-deps symlink_data --force
+[6.786s] running develop
+[7.875s] running egg_info
+[7.881s] writing my_boat_driver.egg-info/PKG-INFO
+[7.883s] writing dependency_links to my_boat_driver.egg-info/dependency_links.txt
+[7.884s] writing entry points to my_boat_driver.egg-info/entry_points.txt
+[7.888s] writing requirements to my_boat_driver.egg-info/requires.txt
+[7.893s] writing top-level names to my_boat_driver.egg-info/top_level.txt
+[7.898s] reading manifest file 'my_boat_driver.egg-info/SOURCES.txt'
+[7.904s] writing manifest file 'my_boat_driver.egg-info/SOURCES.txt'
+[7.914s] running build_ext
+[7.915s] Creating /home/raspberry/boat_ws/install/my_boat_driver/lib/python3.10/site-packages/my-boat-driver.egg-link (link to .)
+[7.919s] Installing motor_driver_node script to /home/raspberry/boat_ws/install/my_boat_driver/lib/my_boat_driver
+[7.926s] Installing motor_driver_test script to /home/raspberry/boat_ws/install/my_boat_driver/lib/my_boat_driver
+[7.927s] 
+[7.929s] Installed /home/raspberry/boat_ws/build/my_boat_driver
+[7.931s] running symlink_data
+[7.933s] symbolically linking /home/raspberry/boat_ws/build/my_boat_driver/resource/my_boat_driver -> /home/raspberry/boat_ws/install/my_boat_driver/share/ament_index/resource_index/packages
+[7.935s] symbolically linking /home/raspberry/boat_ws/build/my_boat_driver/package.xml -> /home/raspberry/boat_ws/install/my_boat_driver/share/my_boat_driver
+[7.937s] symbolically linking /home/raspberry/boat_ws/build/my_boat_driver/launch/driver.launch.py -> /home/raspberry/boat_ws/install/my_boat_driver/share/my_boat_driver/launch
+[8.100s] Invoked command in '/home/raspberry/boat_ws/build/my_boat_driver' returned '0': PYTHONPATH=/home/raspberry/boat_ws/build/my_boat_driver/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/raspberry/boat_ws/install/my_boat_driver/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/raspberry/boat_ws/build/my_boat_driver/build --no-deps symlink_data --force

@@ -34,7 +34,7 @@ def generate_launch_description():
 
     max_rpm_arg = DeclareLaunchArgument(
         'max_rpm', 
-        default_value='60.0',
+        default_value='100.0',
         description='Maximum RPM limit for the motors'
     )
 
